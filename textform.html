@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="refresh" content="5;URL=http://example.com/" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+
+        <input type="text" name="student" id="">
+        <input type="hidden" name="vee" id="" value="vee">
+        
+        <select name="time" id="">
+
+            <option value="victor">vee</option>
+            <option value="odah">odah</option>
+            <option value="tunde">tunde</option>
+        </select>
+
+        <button type="submit">submit</button>
+    </form>
+
+
+
+
+<script>
+     var timer = null;
+
+//when the window is minimized or when user is in different tab . 
+   window.addEventListener('blur', function(){
+
+      timer = setInterval(function(){
+
+         window.location.reload(1);
+
+      },500)
+
+   }, false);
+
+
+//when user is back to window
+   window.addEventListener('focus', function(){
+
+       //stop the page reload once 
+
+       if(timer != null){
+
+       clearInterval(timer);
+
+     }
+   }, false);
+</script>
+</body>
+</html>

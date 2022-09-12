@@ -1,0 +1,176 @@
+.fixed_deposit{
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 20px;
+color: rgba(115, 115, 115, 1);
+}
+
+.fixed_deposit_text{
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: rgb(71, 71, 71);
+margin-bottom: 40px;
+
+}
+
+.fix_deposit_grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 20px;
+}
+
+.fixed_grid_content{
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.account_number_grid{
+    display: flex;
+    gap: 10px;
+}
+
+.account_name{
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: 
+rgba(115, 115, 115, 1);
+}
+
+.account_digit{
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(235, 127, 53, 1);
+}
+
+.br_bottom{
+    width: 99%;
+    margin: auto;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(165, 171, 173, 1);
+}
+
+.col3umnflex{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+grid-gap: 10px;
+}
+
+.col3title{
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(115, 115, 115, 1);
+margin-top: 5px;
+}
+.col3body{
+    margin-top: 5px;
+    color: rgba(235, 127, 53, 1);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
+
+.range_meter{
+    width: 100%;
+}
+
+.range_meter input{
+    width: 100%;
+    
+}
+
+.rangeflex_top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.daylefttxt{
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: 
+rgba(115, 115, 115, 1);
+}
+
+.dayleftnum{
+color: rgba(235, 127, 53, 1);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+
+.transaction_flex_column_btn1 button{
+    float: right;
+    margin-top: 30px;
+    position: relative;
+    background-color: rgba(235, 127, 53, 1);
+    border: 1px solid #fff;
+    font-size: 15px;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .transaction_flex_column_btn1 button:hover{
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #EB7F35;
+    color: #000;
+  
+  }
+  
+  .buttondeposit{
+      width: 100%;
+  }
+
+  @media only screen and (max-width: 590px) {
+
+    .fix_deposit_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-gap: 20px;
+    }
+    
+    }

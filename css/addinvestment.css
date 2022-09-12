@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+   background-color:  #E5E5E5;
+}
+.addinvestmentcontainer{
+    width: 100%;
+}
+.addinvestment_headtext{
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+    
+    
+}
+
+.addnew_investment{
+    width: 80%;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 17px;
+}
+
+
+.addinvestment_body{
+    margin: 20px;
+    border-radius: 8px;
+    padding: 24px;
+    background: rgba(229, 229, 229, 0.29);
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 25px;
+letter-spacing: 0em;
+text-align: justified;
+
+
+}
+
+.addinvestment_gold{
+    color:rgba(235, 127, 53, 1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.addinvest_btn{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.transaction_flex_column_btn1 button{
+    float: right;
+    position: relative;
+    background-color: rgba(235, 127, 53, 1);
+    border: 1px solid #fff;
+    font-size: 15px;
+    color: #FFFFFF;
+    border-radius: 9px;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .transaction_flex_column_btn1 button:hover{
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #EB7F35;
+    color: #000;
+  
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .addnew_investment{
+        width: 90%;
+        padding: 3px;
+    }
+
+    .addinvestment_body{
+        padding: 8px;
+    }
+}

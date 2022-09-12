@@ -1,0 +1,545 @@
+
+.card_box {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.crystalcard{
+    background: linear-gradient(103.45deg, #E7BC9D 3.8%, rgba(234, 138, 71, 0.59) 27.34%, rgba(235, 127, 53, 0.73) 69.86%);
+    padding: 36px;
+    height: auto;
+}
+
+.re{
+  border-radius: 
+  5px;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(215, 215, 215, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+.mbsma{
+  margin-top: 64px;
+}
+
+.mycontent{
+  margin-top: 50px;
+}
+.crystalcardtext{
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color: #fff;
+margin-bottom: 10px;
+}
+
+.innerdog{
+  margin-top: 10px;
+font-size: 15px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+color:  rgba(116, 115, 115, 1);
+}
+
+
+
+.investment_form_title h3{
+  color:  rgba(116, 115, 115, 1);
+}
+
+.crystalcardnumber{
+  font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 47px;
+letter-spacing: 0em;
+text-align: left;
+color: #fff;
+}
+
+.crystalcardtext2{
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color: #ED80348F;
+margin-bottom: 10px;
+
+
+}
+
+.crystalcardnumber2{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #EB7F35;
+    
+}
+
+.crystalcard2{
+    background: #FFFFFF;
+    padding: 36px;
+    height: auto;
+}
+
+.crystalcard3{
+  background: #FFFFFF;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thisside{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crystalsmallcard{
+  padding: 9px;
+  height: 120px;
+width: 110px;
+background: rgba(255, 255, 255, 1);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+gap: 10px;
+}
+
+.textinside{
+font-size: 13px;
+font-weight: 600;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: center;
+color: rgba(115, 115, 115, 1);
+
+
+}
+.svgside{
+ 
+  object-fit: contain;
+  background-color: #fa6807;
+  border-radius: 50%;
+  padding: 5px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.investment_container{
+    margin-top: 35px;
+}
+
+.flexheader {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.add_investment{
+  margin-left: auto;
+}
+
+.flexinput{
+    width: 55%;
+}
+.topnav {
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .topnav .search-container {
+width: 100%;
+display: flex;
+flex-direction: column;
+  }
+  
+  .investment_header{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(115, 115, 115, 1);
+
+    margin-bottom: 9px;
+    
+  }
+
+  .detail{
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-block: 6px;
+  }
+  .investmentpreview{
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: white;
+  align-items: center;
+  }
+
+
+  .sideofamount span{
+font-size: 15px;
+font-weight:500;
+line-height: 15px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(0, 0, 0, 0.76);
+
+
+  }
+  .svgwall{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+.sideofdisplay{
+  display: flex;
+  gap: 5px;
+}
+
+.invamtstatus{
+
+font-size: 14px;
+font-weight: 600;
+line-height: 13px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(0, 0, 0, 0.6);
+
+}
+
+.inatim{
+font-size: 14px;
+font-weight: 400;
+line-height: 13px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(0, 0, 0, 0.76);
+}
+
+.invamtdet{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.buttonflexto{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px;
+}
+
+
+  .newside{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    height: 65vh;
+    overflow-y: scroll;
+    padding: 6px;
+  }
+  
+
+
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 90%;
+    border-radius: 3px;
+  }
+
+  .topnav input[type=text]{
+
+    width: 100%;
+    padding: 10px 22px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 1);
+  }
+  
+
+
+  .topnav .search-container button {
+    padding: 10px 25px;
+    margin: 7px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    margin-top: 8px;
+    color: #fff;
+    background: #EB7F35;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+  .add_investment button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    color: #fff;
+    background: #EB7F35;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-left: -3px;
+    border-radius: 3px;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #fa6807;
+  }
+  
+
+  .investment_container_grid{
+    margin-top: 40px;
+    width: 100%;
+
+}
+
+  .investment_contents{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 20px;
+  }
+
+  .investment_card{
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 7px;
+  }
+
+  .card-header{
+      display: flex;
+      justify-content: space-between;
+
+  }
+
+.account_number{
+    display: flex;
+    flex-direction: column;
+}
+
+.acc_title{
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+  .card_number{
+      margin-top: 5px;
+      color: #EB7F35;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+  }
+
+  .investmentcard_type{
+      margin-top: 20px;
+      color: #737373;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+  }
+  .card_rule_bottom{
+      margin-top: 11px;
+      margin-bottom: 11px;
+      width: 95%;
+    border-bottom: 0.5px solid #EB7F35
+  }
+
+.investment_card_row{
+    display: flex;
+    grid-gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+.investment_card_orange_text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  color: #EB7F35;
+  word-break: break-all;
+}
+
+.investment_card_column{
+  width: 100%;
+}
+
+.investment_card_brown_text{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    color: #737373;
+    
+}
+
+.investment_card_orange_text{
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+color: #EB7F35;
+
+}
+@media(max-width:991px){
+  .innerdog{
+   margin-top: 5px;
+ font-size: 14px;
+ font-weight: 400;
+ line-height: 19px;
+ letter-spacing: 0em;
+ text-align: left;
+ color:  rgba(116, 115, 115, 1);
+ }
+
+ .newside{
+  min-height: 100vh;
+  overflow: scroll;
+ }
+
+
+}
+
+
+@media only screen and (max-width: 690px) {
+
+  .crystalcard{
+    margin-bottom: 15px;
+  }
+
+  .invamtstatus{
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    
+    }
+
+  .crystalcardnumber{
+    font-size: 27px;
+  }
+
+  .crystalcardnumber2{
+    font-size: 27px;
+  }
+  .search-container{
+    display: block;
+  }
+
+  .search-container button{
+    display: none;
+  }
+
+  .re{
+    border-radius: 
+    5px;
+    width: 100%;
+
+    margin: auto;
+  }
+.flexinput{
+  width: 100%;
+}
+.flexheader {
+  flex-direction: column-reverse;
+}
+}

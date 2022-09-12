@@ -1,0 +1,501 @@
+.create_investment_header{
+    width: 80%;
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px;
+}
+
+.create_investment_form{
+    background-color: #fff;
+    width: 80%;
+    margin: auto;
+    margin-top: 2px;
+    padding: 30px;
+}
+
+.create_investment_form_title{
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.form_body_row{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.form_body_column{
+    width: 100%;
+    margin-top: 17px;
+}
+
+input[type=text],[type=email], [type=password],  [type=tel], [type=date], select {
+    width: 100%;
+    padding: 10px 25px;
+    margin: 7px 0 !important;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 100%;
+    line-height: normal !important;
+    font-family: 'Poppins', sans-serif !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(245, 245, 245, 1);
+
+
+  }
+
+ .select2-search__field {
+    padding: 11px 10px !important;
+}
+
+  .select2-container .select2-selection--single .select2-selection__rendered{
+    background: rgba(245, 245, 245, 1);
+   border: none !important; 
+  }
+  .select2-container--default .select2-selection--single{
+    border: none !important; 
+  }
+
+  .select2{
+    width: 100%;
+    padding: 7px 20px;
+    margin: 7px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(245, 245, 245, 1);
+    line-height: normal !important;
+    font-family: 'Poppins', sans-serif !important;
+  }
+
+   .select2-container .select2-selection--single {
+    height: 56px;
+    position: relative;
+  
+    font-family: 'Poppins', sans-serif !important;
+    
+  }
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    line-height: 56px;
+  }
+  .select2-container .select2-selection--single .select2-selection__arrow {
+    top: 16px;
+    right: 8px;
+  }
+
+
+  textarea {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 14px !important;
+    width: 100%;
+    padding: 10px 25px;
+    line-height: normal !important;
+    font-family: 'Poppins', sans-serif !important;
+    margin: 7px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(245, 245, 245, 1);
+
+
+  }
+
+  textarea:active, textarea:focus{
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 13px;
+    border: 1px solid #EB7F35 !important;
+    outline: none; 
+    background-color: #ffffff;
+  }
+
+
+
+
+  input:active {
+    border: 1px solid #EB7F35 !important;
+    outline: none; 
+    background-color: #ffffff;
+  }
+
+
+  input:disabled{
+    cursor: not-allowed;
+    border: 1px solid green;
+  }
+
+  select:disabled{
+    cursor: not-allowed;
+    border: 1px solid green;
+  }
+
+  
+  select:active, select:focus {
+    font-size: 13px;
+    border: 1px solid #EB7F35;
+    outline: none; 
+    background-color: #ffffff;
+  }
+
+
+  input[type=text]:active{
+    border: 1px solid  #EB7F35 !important; 
+  }
+
+  input[type=text]:focus{
+    border: 1px solid  #EB7F35 !important; 
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background: rgba(235, 127, 53, 1);
+    color: white;
+    padding: 14px 27px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #EB7F35;
+    color: #000;
+  }
+
+  .form_button_row{
+      width: 30%;
+      float: right;
+      margin-top: 20px;
+  }
+
+  /* .form_button_row input{
+    padding: 14px 27px;
+    margin: 8px 0;
+  } */
+
+.form_body_column label{
+    color: #000000C9;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+
+
+  }
+
+
+  .investment_info_container{
+  width: 80%;
+  margin: auto;
+  padding: 60px;
+  background-color: #fff;
+  margin-bottom: 50px;
+  }
+  
+  .investmentinfoheader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 21px;
+letter-spacing: 0em;
+
+  }
+.investment_product_type{
+  display: flex;
+  gap: 5px;
+  margin-bottom: 30px;
+
+}
+
+  .investment_product_type_text{
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(0, 0, 0, 1);
+  }
+
+.investment_product_span{
+  color: rgba(235, 127, 53, 1);
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.investment_text{
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: justified;
+margin-bottom: 30px;
+}
+
+.select2-container--default .select2-selection--single {
+  border-radius: 4px;
+  background: rgba(245, 245, 245, 1) !important;
+}
+
+.transaction_header{
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(235, 127, 53, 1);
+margin-bottom: 10px;
+}
+
+.transaction_container{
+  width: 45%;
+}
+
+.transaction_flex{
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction_flex_column{
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(0, 0, 0, 0.8);
+}
+
+.transaction_flex_column_content{
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.transaction_flex_btn{
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.transaction_flex_column_btn1 button{
+  position: relative;
+  background-color: rgba(235, 127, 53, 1);
+  border: 1px solid #fff;
+  font-size: 15px;
+  color: #FFFFFF;
+  border-radius: 9px;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.transaction_flex_column_btn1 button:hover{
+  position: relative;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid #EB7F35;
+  color: #000;
+
+}
+
+
+
+.transaction_flex_column_btn2 button{
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #EB7F35;
+  font-size: 15px;
+  color: rgba(235, 127, 53, 1);
+  border-radius: 9px;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.7s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.transaction_flex_column_btn2 button:hover{
+  background-color: #fd7113;
+  border: 1px solid #fff;
+  color: #fff;
+
+}
+
+.fpas{
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.passworddog{
+margin-top: 10px;
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: center;
+color:rgba(0, 0, 0, 1);
+}
+
+.passworddog span a{
+ color: rgba(235, 127, 53, 1); 
+}
+
+.creativeform1{
+  background-color: #fff;
+  width: 668px;
+  margin: auto;
+  margin-top: 2px;
+  padding: 32px;
+  margin-bottom: 10px;
+
+}
+.fpas a{
+font-size: 14px;
+font-weight: 600;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(0, 0, 0, 0.6);
+margin-top: 5px;
+
+
+}
+
+.fpas a:hover{
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #fd7113;
+  
+  
+  }
+
+  .mycontents{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.creativeform2 {
+  background-color: #fff;
+  width: 480px;
+  margin: auto;
+  margin-top: 2px;
+  padding: 50px;
+  margin-bottom: 50px;
+  
+}
+
+
+
+
+.creativeform23{
+  width: 900px;
+  height: 70vh;
+  overflow: scroll;
+
+}
+.create_investment_header1{
+  width: 900px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .creativeform23{
+    width: 98%;
+  }
+  .create_investment_header1{
+    width: 98%;
+  }
+  
+}
+
+
+
+@media only screen and (max-width: 850px) {
+.form_body_row{
+  flex-direction: column;
+  gap: 1px;
+}
+.create_investment_form{
+  width: 98%;
+  padding: 14px;
+  padding-top: 20px;
+}
+
+.create_investment_header{
+  width: 98%;
+}
+
+.create_investment_header1{
+  width: 98%;
+}
+
+.headercontainer{
+  display: block;
+}
+.investment_info_container {
+  width: 100%;
+  margin: auto;
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+.transaction_flex_btn {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.transaction_container {
+  width: 100%;
+}
+.transaction_flex_btn button{
+  width: 100%;
+}
+
+
+
+}

@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.inbox-wrapper{
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+    grid-template-columns:  1fr 4.5fr;
+    grid-template-rows: 5.5rem;
+    grid-template-areas: 
+        "leftside head head"
+        "leftside main main";
+}
+header{
+    background-color: #f4f4f4;
+    /* background-color: red; */
+    /* background-color: #f4f4f4; */
+    grid-area: head;
+}
+.side-nav{
+    /* background-color: rgb(199, 28, 85); */
+    background-color: #fff;
+    grid-area: leftside;
+}
+.main-content{
+    /* background-color: blueviolet; */
+    /* background-color: #f4f4f4; */
+    grid-area: main;
+} 
+.inbox-wrapper > * {
+    /* color: black; */
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    padding: 1rem;
+    border-radius: 0.3em;
+}
+body{
+    background-color: #f4f4f4;
+}
+/*Header Style {others come from the board.css style sheet*/
+
+/*Inbox card styles*/
+.inbox-search{
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-radius:  5px;
+    margin-bottom: 20px;
+}
+.inbox-search input{
+    width: 100%;
+    border: none;
+}
+.inbox-expand{
+    display: grid;
+    grid-template-columns: 1.4fr 3.5fr;
+    /* background-color: lightgreen; */
+}
+.inbox-cards-search{
+    padding-right:  10px;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px; */
+    /* background-color: blue; */
+    
+}
+.inbox-card-wrapper{
+    height: calc(100vh - 12.7rem);
+    overflow-y: scroll;
+    /* background-color: cadetblue; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+    padding-right: 7px;
+}
+.inbox-card{
+    padding: 20px 10px;
+    border-radius: 5px;
+    /* background-color: aqua;   */
+    background-color: #fff;
+}
+.inbox-card p{
+    margin-top: 20px;
+}
+/* .inbox-card p::after{
+    content: '1';
+    background-color: #A91F2F;
+    padding: 2px;
+    width: 10px;
+    height: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+} */
+.img-time, .inner-img-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inner-img-time img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.inbox-name{
+    font-weight: 700;
+    color: #A91F2F;
+}
+.inbox-time{
+    color: #424243;
+    font-weight: 500;
+}
+.chatbox{
+    background-color: dodgerblue;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: calc(100vh - 8.2rem);
+    overflow-y: scroll;
+}

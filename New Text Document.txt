@@ -1,0 +1,19 @@
+'image', 'cv', 'phone_number', 'dateregistered', 'dateofbirth', 'gender', 'job_specialty',
+                  'residential_address', 'permanent_address',
+                  'experience1_title', 'experience1_desc', 'experience2_title', 'experience2_desc', 'experience3_title',
+                  'experience3_desc', 'schoolname', 'courseofstudy', 'startdate', 'enddate'
+
+
+
+ {{experience.institution }}
+    <p>  {{experience.course }} </p>
+
+    <button hx-get="{%url 'edu-update' experience.id %}">Update</button>
+    <button hx-post="{%url 'edu-delete' experience.id %}">Delete</button>
+
+
+
+
+    job_specialty = models.CharField(max_length=200, blank=True)
+    preferred_match = models.CharField(max_length=200, blank=True)
+    

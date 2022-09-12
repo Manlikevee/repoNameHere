@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.settings-wrapper{
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "leftside head head"
+        "leftside main main";
+}
+header{
+    background-color: #f4f4f4;
+    /* background-color: rgb(75, 255, 216); */
+    grid-area: head;
+}
+
+
+.main-content{
+    /* background-color: blueviolet; */
+    /* background-color: palevioletred; */
+    grid-area: main;
+    height: calc(100vh - 6rem);
+    overflow-y: scroll;
+}
+.settings-wrapper > * {
+    /* color: black; */
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    padding: 1rem;
+    border-radius: 0.3em;
+}
+body{
+    background-color: #f4f4f4;
+}
+
+/* Profile Info Style*/
+.profile-info{
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    /* margin-top: 20px; */
+    background-color: #fff;
+}
+.profile-name{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.profile-info-contact{
+    width: 100%;
+    flex-grow: 2;
+    
+}
+.flex-info div{
+    display: inline-block;
+    /* padding-right: 30px; */
+}
+.flex-info{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-info div:nth-child(3){
+    margin-right: 50px;
+}
+.profile-info svg{
+    align-self: flex-start;
+}
+.field{
+    font-size: 14px;
+    color: #424243;
+    margin-bottom: 5px;
+}
+.property{
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*Style for link bar*/
+.settings-link{
+    margin-top: 20px;
+    background-color: #e5e5e5;
+    display: flex;
+    text-align: center;
+}
+.settings-link a{
+    color: #424243;
+    text-decoration: none;
+    font-size: 16px;
+    flex-grow: 1;
+    padding: 20px 10px;
+    /* margin-right: 5px; */
+    /* background-color: green; */
+}
+.settings-link a:focus{
+    background-color: #a91f2f;
+    color: white;
+}
+
+/* Style for the subscription section*/
+.subscription{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243; 
+}
+.subscription h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.sub-details{
+    display: flex;
+    align-items: center;
+}
+.edu-logo{
+    align-self: flex-start;
+}
+.edu-logo img{
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    align-self: flex-start;
+}
+.light{
+    font-size: 14px;
+    font-weight: 300;
+    color: #181818;
+    margin-bottom: 10px;
+}
+.current-sub, .price{
+    margin-right: 50px;
+}
+#trial{
+    color: #a91f2f;
+}
+.current-sub p:nth-child(2), .price p:nth-child(2), .expiry-date p:nth-child(2){
+    font-weight: bold;
+    font-size: 14px;
+}
+.subscription button{
+    padding: 10px 25px;
+    background-color: #a91f2f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-left: auto;
+}
+
+/*Style for the plans*/
+.plans-wrapper{
+    /* background-color: darkorchid; */
+    margin-top: 20px;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 100%;
+}
+.thead{
+    background-color: #fff;   
+}  
+thead th{
+    padding: 35px 0; 
+    text-align: center;  
+    font-weight: 600;
+}
+thead th:first-child{
+    text-align: left;
+}
+thead small{
+    font-size: 14px;
+    font-weight: 300;
+}
+table td, th{
+    padding: 13px 0;
+    margin: 0;
+    text-align: left;
+}
+th:first-child, td:first-child{
+    padding-left: 10px;
+}
+th:first-child{
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+th:last-child{
+border-bottom-right-radius: 7px;
+border-top-right-radius: 7px;
+}
+tbody tr {
+    background-color: #fff;
+    /* padding: 15px 0; */
+}
+tbody tr td:last-child{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px; 
+}
+tbody tr td:first-child{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px; 
+    width: 25%;
+}
+tbody tr td{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 0;
+
+}
+tbody tr td:first-child{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Style for biography in settings*/
+/* .settings-biography{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243;
+}
+
+.settings-biography h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.settings-biography p{
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: justify;
+}
+.settings-biography a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0275B1;
+} */

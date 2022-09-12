@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.settings-wrapper{
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+}
+header{
+    background-color: #f4f4f4;
+    /* background-color: rgb(75, 255, 216); */
+    grid-area: head;
+}
+.side-nav{
+    background-color: #fff;
+     /* background-color: palevioletred; */
+    grid-area: leftside;
+    padding: 1rem;
+}
+
+.main-content{
+    /* background-color: blueviolet; */
+    /* background-color: palevioletred; */
+    grid-area: main;
+    height: calc(100vh - 6rem);
+    overflow-y: scroll;
+}
+.settings-wrapper > * {
+    /* color: black; */
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    padding: 1rem;
+    border-radius: 0.3em;
+}
+body{
+    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+/* Profile Info Style*/
+.profile-info{
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: 5px;
+    /* margin-top: 20px; */
+    background-color: #fff;
+}
+.profile-name{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.profile-info-contact{
+    flex-grow: 2;
+    padding-left: 30px;
+}
+.flex-info div{
+    display: inline-block;
+    /* padding-right: 30px; */
+}
+.flex-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.flex-info div:nth-child(3){
+    margin-right: 50px;
+}
+.profile-info svg{
+    align-self: flex-start;
+}
+.field{
+    font-size: 14px;
+    color: #424243;
+    margin-bottom: 5px;
+}
+.property{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*Style for link bar*/
+.settings-link{
+    margin-top: 20px;
+    background-color: #e5e5e5;
+    display: flex;
+    text-align: center;
+}
+.settings-link a{
+    color: #424243;
+    text-decoration: none;
+    font-size: 16px;
+    flex-grow: 1;
+    padding: 20px 10px;
+    /* margin-right: 5px; */
+    /* background-color: green; */
+}
+.settings-link a:focus{
+    background-color: #a91f2f;
+    color: white;
+}
+
+/*Style for biography in settings*/
+.settings-biography{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243;
+}
+
+.settings-biography h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.settings-biography p{
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: start;
+}
+.settings-biography a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #0275B1;
+}
+
+
+/*General style for the edit svg as an image*/
+.edit-svg{
+    width: 25px;
+    height: 25px;
+}
+/*General style for the heading and edit button of each section*/
+.heading-edit{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* background-color: darkgreen; */
+}
+
+
+/*Style for work experience in settings*/
+.work-experience{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243;
+}
+.work-experience h2{
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.experience-block{
+    display: flex; 
+    /* background-color: #0275B1; */
+    padding-bottom: 30px;  
+    margin-top: 30px;
+    border-bottom: 1px solid #ededed;
+}
+.experience-text,
+.education-text{
+    padding-left: 14px;
+}
+.position{
+    font-size: 16px;
+    font-weight: bold;
+}
+.position span{
+    font-weight: lighter;
+}
+.company{
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.company span{
+    margin-left: 20px;
+    font-weight: #424243;
+}
+.date{
+    margin-top: 10px;
+    color: #424243;
+    font-weight: 300;
+    font-size: 13px;
+}
+.date span{
+    color: #a91f2f;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.responsibility{
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.responsibility p:first-child{
+    margin-bottom: 15px;
+}
+.responsibility p:nth-child(2){
+    text-align: justify;
+    width: 95%;
+}
+
+/*Education Style*/
+.education{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243;
+}
+.education h2{
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.education-details{
+    display: flex;
+}
+.education-text p:last-child{
+    color: #181818;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/*Area of expertise*/
+.expertise{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243;
+}
+.expertise h2{
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.expertise-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+}
+.expertise ul li{
+    list-style: none;
+    line-height: 2;
+    /* color: #424243; */
+    font-size: 14px;
+}
+
+/*Board Preference Styles*/
+.board-preference{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243;
+}
+.board-preference h2{
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.preference-type p{
+    display: inline-block;
+    margin-right: 3rem;
+    font-size: 14px;
+}
+.preference-type{
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.preference-type label{
+    font-size: 14px;
+    color: #424243;
+}
+.board-check{
+    display: inline-block;
+}
+/*Customized checkbox*/
+.container {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 70px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #dc9da4;
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    /* background-color: #2196F3; */
+    border:  1px solid #9e1323;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #9e1323;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/*Settings resume styling*/
+.settings-resume{
+    padding: 20px 30px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #424243;
+}
+.settings-resume h2{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.svg-name,
+.settings-svg-edits{
+    display: flex;
+    align-items: center;
+}
+.settings-svg-edits svg{
+    margin-left: 20px;
+}
+.resume-name{
+    margin-left: 10px;
+}
+.resume-name p{
+    font-size: 14px;
+    font-weight: bold;
+}
+.resume-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9BDC0;
+    border-radius: 4px;
+    padding: 20px 20px;
+    /* margin-top: 20px; */
+}
+.settings-resume button{
+    display: flex;
+    align-items: center;
+    background-color: #a91f2f;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+.settings-resume button svg{
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .profile-info{
+        display: flex;
+        flex-direction: column !important;
+    }
+    .msg-nav {
+        display: none;
+    }
+    .settings-link{
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+    .settings-biography{
+        padding: 20px 20px;
+        }
+
+        .work-experience{
+            padding:20px 20px;
+        }
+
+
+    .side-nav {
+      display: none;
+    }
+    .role-wrapper{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .job-evaluation{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .responsibility p:nth-child(2){
+        width: 100%;
+    }
+
+    .profile-info{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 20px 10px;
+        border-radius: 5px;
+        /* margin-top: 20px; */
+        background-color: #fff;
+    }
+
+
+
+   
+    .search-fields{
+        display: none;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+        border-radius: 7px;
+    }
+
+    .flex-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .profile-info button {
+        display: flex;
+        padding: 10px;
+        float: right;
+        align-items: center;
+    }
+
+    .drop-down{
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2px;
+    }
+
+    .input-search{
+        width: 100%;
+    }
+
+
+}
