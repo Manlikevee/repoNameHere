@@ -39,6 +39,17 @@
 }
 
 
+.buttonflexto2  {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px;
+}
+
+.buttonflexto2 .add_investment{
+margin: 1px;
+}
+
 .mbsma{
   margin-top: 64px;
 }
@@ -491,11 +502,47 @@ color: #EB7F35;
  color:  rgba(116, 115, 115, 1);
  }
 
+ .mycontents {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
  .newside{
   min-height: 100vh;
   overflow: scroll;
+  overflow-y: scroll;
+  grid-gap: 18px;
  }
 
+
+
+
+}
+
+@media(max-width:991px){
+  .mycontents {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.creativeform23 {
+    width: 100%;
+    height: 81vh;
+    overflow: scroll;
+}
+
+.form_body {
+  padding: 10px;
+}
+
+.form_button_row{
+  width: 100%;
+}
 
 }
 

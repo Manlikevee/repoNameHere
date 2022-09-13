@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/createinvestment.css">
+     
+
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="logo">
+                       <a href="#">
+                        <img src="img/Crystal-Logo 1.svg" alt="">
+                       </a>
+                    </div>
+
+                    
+                    <button type="button" class="nav-toggler">
+                       <span></span>
+                    </button>
+                    <nav class="nav">
+                       <ul>
+                          <li><a href="#" class="active">Dashboard</a></li>
+                          <li><a href="profile.html">Loans</a></li>
+                          <li><a href="profile.html">Investment</a></li>
+                          <li><a href="profile.html">Self Service</a></li>
+                          <li><a href="#">Contact</a></li>
+                          <li> <a href=""> 
+                            <div class="endnav m2wo">
+                                <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                                    <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                </div> 
+                             </div>     
+                        </a> </li>
+                       </ul>
+
+                    </nav>
+
+                    <div class="endnav out">
+                        <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                            <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                        </div> 
+                     </div>     
+                   
+                 
+                </div>
+            </div>
+         </header>
+
+         <div class="main-content container22">
+
+            <div class="mycontent mycontents" style="flex-direction: column;">
+                <div class="create_investment_header1">
+                    <div class="back">
+                    
+                        Term Loan
+                    </div>
+            
+                    <div class="close">
+                        <i class="fa fa-times fa-1x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="create_investment_form creativeform2 creativeform23">
+                    
+                    <div class="investment_form_title">
+                        <h3>New Loan</h3>
+
+                    </div>
+        
+                    <div class="form_body">
+
+
+      
+
+
+        
+                        <div class="form_body_row">
+                            <div class="form_body_column"> 
+                                <label for="lname">Loan Amount</label>
+                                <input type="number" id="p" name="email" placeholder="Principal Amount" required>    
+                            </div>
+                        
+        
+                        </div>
+
+                        <div class="form_body_row">
+
+                            <div class="form_body_column"> 
+                                <label for="lname">Tenor</label>
+                                <input type="number" id="t" name="email"  required value="1">    
+                            </div>
+
+                            <div class="form_body_column"> 
+
+                                <label for="lname">Rate</label>  
+                                <input type="number" id="r" name="email" placeholder="Interest Rate" required value="20"> 
+                                <!-- 17.5 -->
+                            </div>
+
+
+        
+                        </div>
+
+
+                        <div class="form_body_row">
+               
+
+                            <div class="form_body_column"> 
+
+                                <label for="lname">Total Interest</label>
+                                <input type="number" id="totalInts" name="email" placeholder="Interest Rate" required value="12"> 
+                             
+                            </div>
+
+                            <div class="form_body_column"> 
+                                <label for="lname">Monthly repayment</label>
+                                <input type="number" id="pmts" name="email" placeholder="Interest Rate" required >                            </div>
+
+                        </div>
+
+
+
+                        
+                        <div class="form_body_row">
+
+                            <div class="form_body_column"> 
+                                <label for="lname">Total Repayment</label>
+                                <input type="number" id="totalCosts" name="email" placeholder="Enter a tenor" required >    
+                            </div>
+
+                            <div class="form_body_column"> 
+                                <label for="lname">Loan Purpose</label>
+                               <select name="" id="">
+                                <option value="select an option">select an option</option>
+                               </select>  
+                            </div>
+
+        
+                        </div>
+
+         
+
+
+
+
+
+
+
+ 
+                        <div class="form_body_row" >
+   
+                            <div class="form_button_row" 
+                        >
+                                <input type="submit" value="Request Loan">
+                            </div>
+                        </div>
+                        
+        <span id="pmt"></span>
+        <span id="totalInt"></span>
+        <span id="totalCost"></span>
+        
+
+        
+        
+        
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+
+
+
+        
+        <script
+        src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+        crossorigin="anonymous"></script>
+
+<script>
+            
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+   
+    function navToggle() {
+       navToggler.classList.toggle("active");
+       const nav = document.querySelector(".nav");
+       nav.classList.toggle("open");
+       if(nav.classList.contains("open")){
+           nav.style.maxHeight = nav.scrollHeight + "px";
+       }
+       else{
+           nav.removeAttribute("style");
+       }
+    } 
+           </script>
+
+        <script src="battuta.js" ></script>
+       <script src="va.js"></script>
+    </body>
+</html>
