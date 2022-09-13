@@ -8,6 +8,7 @@ pamount.addEventListener("input", simpleInterest);
 interest.addEventListener("input", simpleInterest);
 tenur.addEventListener("input", simpleInterest);
 edate.addEventListener("input", simpleInterest);
+mdate.addEventListener("input", simpleInterest);
 
 
 let today = new Date().toISOString().substr(0, 10);
