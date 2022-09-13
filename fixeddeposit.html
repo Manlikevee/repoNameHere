@@ -73,8 +73,7 @@
         Fixed Deposit
     </div>
     <div class="fixed_deposit_text">
-        Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. 
-    </div>
+        A fixed deposit, also known as an FD, is an investment instrument offered by banks, as well as non-banking financial companies (NBFC) to their customers to help them save money. With an FD account, you can invest a sizeable amount of money at a predetermined rate of interest for a fixed period    </div>
 
     <div class="fix_deposit_grid">
         <div class="fixed_grid_content">
@@ -138,7 +137,9 @@
                 <div class="dayleftnum">40 days</div>
             </div>
             <div class="range_meter">
-                <input type="range"  min="1" max="100" value="50" >
+                <div id="inputDiv">
+                    <div id="etiqueta"></div>
+                <input type="range"  min="1" max="100" value="50" disabled  readonly >
             </div>
 
 
@@ -174,6 +175,49 @@
     } 
            </script>
 
+
+<script>
+ 
+    var s = document.createElement('style');
+document.head.appendChild(s);
+
+var inputDiv = document.querySelector('#inputDiv');
+var w = parseInt(window.getComputedStyle(inputDiv, null).getPropertyValue("width"));
+/* EL INPUT */
+var elInput = document.querySelector("input[type='range']");
+elInput.style.width = w +"px";
+var inputMin = elInput.getAttribute('min');
+var inputMax = elInput.getAttribute('max');
+var k = w/(inputMax - inputMin);
+
+/* LA ETIQUETA */
+var etiqueta = document.querySelector('#etiqueta');
+var ew = parseInt(window.getComputedStyle(etiqueta, null).getPropertyValue("width"));
+
+
+/* el valor de la etiqueta (el tooltip) */
+etiqueta.innerHTML = elInput.value;
+/* calcula la posición inicial de la etiqueta (el tooltip) */
+// etiqueta.style.left =  ((elInput.value * k) - (ew/2))+"%";
+/* establece el estilo inicial del TRACK */
+s.textContent ="input[type=range]::-webkit-slider-runnable-track{ background-image:-webkit-linear-gradient(left, #EB7F35 "+elInput.value+"%, #999 "+elInput.value+"%)}"
+s.textContent +="input[type=range]::-moz-range-track{ background-image:-moz-linear-gradient(left, #EB7F35 "+elInput.value+"%,#999 "+elInput.value+"%)}"
+
+
+
+
+elInput.addEventListener('input',function(){
+	
+/* cambia el valor de la etiqueta (el tooltip) */
+etiqueta.innerHTML =elInput.value;
+/* cambia la posición de la etiqueta (el tooltip) */
+etiqueta.style.left =  ((elInput.value * k) - (ew/2))+"px";
+/* cambia el estilo del TRACK */
+s.textContent ="input[type=range]::-webkit-slider-runnable-track{ background-image:-webkit-linear-gradient(left, #EB7F35 "+elInput.value+"%, #999 "+elInput.value+"%)}"
+s.textContent +="input[type=range]::-moz-range-track{ background-image:-moz-linear-gradient(left, #EB7F35 "+elInput.value+"%,#999 "+elInput.value+"%)}"
+
+}, false);
+</script>
 
         <script src="" async defer></script>
     </body>

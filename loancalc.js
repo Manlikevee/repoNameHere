@@ -1,3 +1,4 @@
+
 var principal = 0;
 var interestRate = 0;
 var timesCompounded = 0;
