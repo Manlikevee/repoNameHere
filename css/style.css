@@ -311,7 +311,7 @@ color: rgba(0, 0, 0, 0.76);
 
 
   .topnav input[type=text] {
-    padding: 6px;
+    padding: 5px;
     margin-top: 8px;
     font-size: 17px;
     border: none;
@@ -322,13 +322,16 @@ color: rgba(0, 0, 0, 0.76);
   .topnav input[type=text]{
 
     width: 100%;
-    padding: 10px 22px;
-    margin: 5px 0;
+    padding: 7px 20px;
+    margin: 7px 0 !important;
     display: inline-block;
     border: 1px solid #ccc;
+    font-size: 100%;
+    line-height: normal !important;
+    font-family: 'Poppins', sans-serif !important;
     border-radius: 4px;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 1);
+    background: rgba(245, 245, 245, 1);
   }
   
 
