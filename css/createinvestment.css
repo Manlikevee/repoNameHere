@@ -426,7 +426,7 @@ margin-top: 5px;
   margin: auto;
   margin-top: 2px;
   padding: 50px;
-  margin-bottom: 50px;
+ 
   
 }
 
@@ -447,6 +447,9 @@ margin-top: 5px;
   .creativeform23{
     width: 98%;
   }
+  .create_investment_form.creativeform2 {
+    margin-top: auto;
+}
   .create_investment_header1{
     width: 98%;
   }
@@ -504,12 +507,17 @@ margin-top: 5px;
 
 @media(max-width:991px){
   .mycontents {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
+
+.emptydv{
+  padding-bottom: 50px;
+}
+
 .creativeform23 {
     width: 100%;
     height: 81vh;
