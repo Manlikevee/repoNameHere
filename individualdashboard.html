@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/addinvestment.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -61,7 +62,55 @@
          </header>
 
 
-<div class="main-content mbsma container">
+         <div id="overlay">
+
+            <div class="hehehe">
+                <div class="addinvestmentcontainer">
+                    
+            
+            
+            
+                    <div class="addnew_investment">
+                        <div class="addinvestment_headtext"> 
+                        <span>Add Investment</span>   <b class="btn-modal-close"><ion-icon name="close-circle-outline" size="large"></ion-icon></b> 
+                        </div>
+            
+                    <div class="investmentwrappe">
+                        <div class="addinvestment_body">
+                            <div class="addinvestment_gold">
+                                Fixed Deposit
+                            </div>
+                          <div class="bodyofwork">
+                            Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. 
+                            Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät.
+                            <div class="addinvest_btn">
+                                <div class="transaction_flex_column_btn1"><button>Invest</button></div> 
+                            </div>
+                          </div> 
+                           
+                        </div>
+            
+                        <div class="addinvestment_body">
+                            <div class="addinvestment_gold">
+                                Call Deposit
+                            </div>
+                            Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. Best grafen vid piligt. Desbel plabul. 
+                            Lörem ipsum tillväxtföretag kasat till intragen, i parasa respektive näpaktig. Dosamma Anna Hermansson, anat, gir. Fösivagt lyr trängselskatt ortad, och nagelprotest, rekät. 
+                            <div class="addinvest_btn">
+                                <div class="transaction_flex_column_btn1"><button>Invest</button></div> 
+                            </div>
+                           
+                        </div>
+                    </div>
+            
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+
+<div class="main-content mbsma container" id="invoice">
 
 <div class="card_box">
     <div class="crystalcard re">
@@ -76,7 +125,7 @@
         <div class="crystalcardtext2"> Total Loan Balance </div>
         <div class="crystalcardnumber2">&#8358; 10,000,000 </div>
     </div>
-    <div class="thisside">
+    <div class="thisside btn-modal-open">
         <div class="crystalsmallcard">
 <div class="svgside">
     
@@ -138,7 +187,7 @@
 
         </div>
         <div class="add_investment">
-            <button>+ Add Investment</button>
+            <button id="download">+ Add Investment</button>
         </div>
     </div>
 
@@ -446,6 +495,26 @@
 </div>
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+<script>
+    window.onload = function () {
+        document.getElementById("download")
+            .addEventListener("click", () => {
+                const invoice = this.document.getElementById("invoice");
+                console.log(invoice);
+                console.log(window);
+                var opt = {
+                    margin: 1,
+                    filename: 'myfile.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'tabloid', orientation: 'portrait' }
+                };
+                html2pdf().from(invoice).set(opt).save();
+            })
+    }
+    
+    </script>
         
 <script>
             
@@ -465,6 +534,39 @@
     } 
            </script>
 
+
+<script>
+    /* THINGS TO THINK ABOUT*/
+/* 
+1. Grab the button element and set it to a variable to that I can do things with it
+2. Add an event listener to the button element and set it to "click". This tells javascript, "Hey, when I CLICK this button"... 
+3. Write a function for the event listener so that when the button is clicked, it performs an action that you want. So the next thing you tell the event listener is, "Hey, when I click this button, do the thing inside the function"
+*/
+
+// 1.
+const btnOpenEl = document.querySelector(".btn-modal-open");
+const btnCloseEl = document.querySelector(".btn-modal-close");
+console.log(btnCloseEl);
+const modal = document.getElementById("overlay");
+
+//2.																The function!
+btnOpenEl.addEventListener("click", openModal);
+//                                   Another One!
+btnCloseEl.addEventListener("click", closeModal)
+
+//3.
+/* For the modal i'm going to be setting two different event listeners on two different buttons. The functions provided will open the modal and close the modal*/
+function openModal(){
+modal.style.display = "block";
+}
+
+function closeModal(){
+modal.style.display = "none";
+}
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="" async defer></script>
         <script src="nav.js"></script>
     </body>

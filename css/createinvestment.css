@@ -47,10 +47,15 @@ input[type=text],[type=email], [type=password], [type=number],  [type=tel], [typ
   border-radius: 4px;
   box-sizing: border-box;
   background: rgba(245, 245, 245, 1);
+  outline-color: transparent;
 
 
 }
 
+input:focus{
+outline-color: #EB7F35;
+  
+  }
 
  .select2-search__field {
     padding: 11px 10px !important;
@@ -118,6 +123,10 @@ input[type=text],[type=email], [type=password], [type=number],  [type=tel], [typ
     outline: none; 
     background-color: #ffffff;
   }
+  textarea:focus{
+    outline-color: #EB7F35;
+      
+      }
 
 
 
