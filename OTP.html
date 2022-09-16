@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/createinvestment.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+      <style>
+
+        .spaceding{
+            display: flex;
+            grid-gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .digit-group {
+		width: 40px !important;
+		height: 50px !important;
+		border: 1px solid #999;
+	
+		text-align: center;
+		font-size: 22px;
+		font-weight: 900;
+		color: #000;
+		margin: 0 2px !important;
+        padding: 0 2px !important;
+        }
+
+        .digit-group:focus {
+		width: 40px !important;
+		height: 50px !important;
+		border: 1px solid #999;
+	
+		text-align: center;
+		font-size: 22px;
+		font-weight: 900;
+		color: #000;
+		margin: 0 2px !important;
+        padding: 0 2px !important;
+        }
+      </style>
+
+        <header class="header" data-header>
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="logo">
+                       <a href="#">
+                        <img src="img/Crystal-Logo 1.svg" alt="">
+                       </a>
+                    </div>
+
+                    
+                    <button type="button" class="nav-toggler">
+                       <span></span>
+                    </button>
+                    <nav class="nav">
+                   
+                    </nav>
+
+                   
+                 
+                </div>
+            </div>
+         </header>
+
+
+<div class="main-content container22">
+
+    <div class="mycontent mycontents">
+
+        <div class="create_investment_form creativeform2">
+            
+            <div class="investment_form_title">
+                <h3>Phone Number Verification</h3>
+                <p>
+                
+                </p>
+                <p class="innerdog">
+                    A Four (4) digit Code has been sent to the mobile number you provided.                </p>
+            </div>
+ 
+<form  method="get">
+            <div class="form_body">
+
+                <div class="form_body_row">
+                    <div class="form_body_column spaceding" id="OTPInput" >
+  
+                    </div>
+
+                </div>
+                <div >
+                    <input  id="otp" name="otp" hidden>
+                </div>
+                
+                <div class="passworddog">
+                    Didn’t receive code? <span><a href="signup.html">Resend Code ?</a> </span> 
+                </div>
+
+
+
+                <div class="form_body_row" >
+   
+                    <div class="form_button_row" style="
+                    width: 100%;
+                ">
+                        <input type="submit" value="Verify" id="otpSubmit" >
+                    </div>
+                </div>
+
+ 
+
+
+
+
+            </div>
+        </form>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script>
+    /* This creates all the OTP input fields dynamically. Change the otp_length variable  to change the OTP Length */
+const $otp_length = 6;
+
+const element = document.getElementById('OTPInput');
+for (let i = 0; i < $otp_length; i++) {
+  let inputField = document.createElement('input'); // Creates a new input element
+  inputField.className = "digit-group";
+  // Do individual OTP input styling here;
+  inputField.style.cssText = " text-shadow: 0 0 0 gray;"; // Input field text styling. This css hides the text caret
+  inputField.id = 'otp-field' + i; // Don't remove
+  inputField.maxLength = 1; // Sets individual field length to 1 char
+  inputField.required = true;
+  element.appendChild(inputField); // Adds the input field to the parent div (OTPInput)
+}
+
+/*  This is for switching back and forth the input box for user experience */
+const inputs = document.querySelectorAll('#OTPInput > *[id]');
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('keydown', function(event) {
+    if (event.key === "Backspace") {
+
+      if (inputs[i].value == '') {
+        if (i != 0) {
+          inputs[i - 1].focus();
+        }
+      } else {
+        inputs[i].value = '';
+      }
+
+    } else if (event.key === "ArrowLeft" && i !== 0) {
+      inputs[i - 1].focus();
+    } else if (event.key === "ArrowRight" && i !== inputs.length - 1) {
+      inputs[i + 1].focus();
+    } else if (event.key != "ArrowLeft" && event.key != "ArrowRight") {
+      inputs[i].setAttribute("type", "text");
+      inputs[i].value = ''; // Bug Fix: allow user to change a random otp digit after pressing it
+      setTimeout(function() {
+        inputs[i].setAttribute("type", "password");
+      }, 1000); // Hides the text after 1 sec
+    }
+  });
+  inputs[i].addEventListener('input', function() {
+    inputs[i].value = inputs[i].value.toUpperCase(); // Converts to Upper case. Remove .toUpperCase() if conversion isnt required.
+    if (i === inputs.length - 1 && inputs[i].value !== '') {
+      return true;
+    } else if (inputs[i].value !== '') {
+      inputs[i + 1].focus();
+    }
+  });
+
+}
+/*  This is to get the value on pressing the submit button
+  *   In this example, I used a hidden input box to store the otp after compiling data from each input fields
+  *   This hidden input will have a name attribute and all other single character fields won't have a name attribute
+  *   This is to ensure that only this hidden input field will be submitted when you submit the form */
+
+document.getElementById('otpSubmit').addEventListener("click", function() {
+  const inputs = document.querySelectorAll('#OTPInput > *[id]');
+  let compiledOtp = '';
+  for (let i = 0; i < inputs.length; i++) {
+    compiledOtp += inputs[i].value;
+    console.log(compiledOtp)
+  }
+  document.getElementById('otp').value = compiledOtp;
+  return true;
+});
+    </script>
+        
+        <script>
+            
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+        </script>
+        <script src="nav.js"></script>
+    </body>
+</html>
