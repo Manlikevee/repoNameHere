@@ -19,6 +19,12 @@
 
     </head>
     <body>
+
+        <style>
+            input:disabled{
+                border: 1px solid red;
+            }
+        </style>
         <header class="header" data-header>
             <div class="container">
                 <div class="row align-items-center justify-content-between">
@@ -92,25 +98,25 @@
         
                         <div class="form_body_row">
                             <div class="form_body_column"> 
-                                <label for="lname">Email Address</label>
-                                <input type="email" id="fname" name="email" placeholder="Email Address">    
+                                <label for="lname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Enter First Name">    
                             </div>
                             <div class="form_body_column"> 
-                                <label for="lname">Email Address</label>
-                                <input type="email" id="fname" name="email" placeholder="Email Address">    
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="fname" name="lastname" placeholder="Enter Last Name">    
                             </div>
         
                         </div>
                         <div class="form_body_row">
                             <div class="form_body_column"> 
-                                <label for="lname">Email Address</label>
-                                <input type="email" id="fname" name="email" placeholder="Email Address">    
+                                <label for="lname">Middle Name</label>
+                                <input type="text" id="fname" name="Middle Name" placeholder="Middle Name">    
                             </div>
                             <div class="form_body_column"> 
                                 <label for="lname">Email Address</label>
                                 <input type="email" id="fname" name="email" placeholder="Email Address">    
                             </div>
-        
+    
                         </div>
 
                         <div class="form_body_row">
@@ -147,17 +153,59 @@
 
                         <div class="form_body_row">
                             <div class="form_body_column"> 
-                                <label for="lname">Email Address</label>
-                                <input type="email" id="fname" name="email" placeholder="Email Address">    
+                                <label for="lname">Enter Address for search</label>
+                                <input id="autocomplete-address" type="text" placeholder="Start typing your address...">   
+                                <input type="hidden" class="field" id="street_number">
+                                <input type="hidden" class="field" id="route">
+                                <input type="hidden" class="field" id="locality">
+                                <input type="hidden" class="field" id="administrative_area_level_1">
+                                <input type="hidden" class="field" id="postal_code">
+                                <input type="hidden" class="field" id="country"> 
+                            </div>
+                        </div>
+
+                        <input id="manual_address" type="checkbox" value="true"><label for="manual_address">Edit Address Manually</label>
+
+
+
+                        <div class="form_body_row">
+                            <div class="form_body_column"> 
+                                <label for="lname">Address</label>
+                                <input type="text" name="rep_address_1" disabled="true">   
                             </div>
                             <div class="form_body_column"> 
-                                <label for="lname">Email Address</label>
-                                <input type="email" id="fname" name="email" placeholder="Email Address">    
+                                <label for="lname">Address 2</label>
+                                <input type="text" name="rep_address_2" disabled="true">    
                             </div>
         
                         </div>
 
                         <div class="form_body_row">
+                            <div class="form_body_column"> 
+                                <label for="lname">City</label>
+                                <input type="text" name="rep_city" disabled="true">  
+                            </div>
+                            <div class="form_body_column"> 
+                                <label for="lname">State</label>
+                                <input type="text" name="rep_state" disabled="true">    
+                            </div>
+        
+                        </div>
+
+
+                        <div class="form_body_row">
+                            <div class="form_body_column"> 
+                                <label for="lname">Zip Code</label>
+                                <input type="text" name="rep_zip" disabled="true"> 
+                            </div>
+                            <div class="form_body_column"> 
+
+                            </div>
+        
+                        </div>
+
+
+                        <!-- <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Email Address</label>
                           <textarea name="" id="" cols="30" rows="10" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti tempore corporis consequuntur labore numquam quae laborum atque debitis nostrum ea rem molestiae, fugiat, reprehenderit sed deserunt dicta corrupti ipsum nam tenetur cumque officia similique quibusdam. Vero culpa, sint natus praesentium fugit rem, ullam sunt labore exercitationem fuga quas dicta distinctio.
@@ -165,20 +213,7 @@
                             </div>
 
         
-                        </div>
-
-                        <div class="form_body_row">
-                            <div class="form_body_column"> 
-                                <label for="lname">Email Address</label>
-                                <input type="email" id="fname" name="email" placeholder="Email Address">    
-                            </div>
-                            <div class="form_body_column"> 
-                                <label for="lname">Email Address</label>
-                                <input type="email" id="fname" name="email" placeholder="Email Address">    
-                            </div>
-        
-                        </div>
-
+                        </div> -->
 
 
                         <div class="form_body_row" >
@@ -210,7 +245,7 @@
             $('.select2').select2({
         });
         </script>
-
+<script src="autocomp.js"></script>
 <script>
             
     const navToggler = document.querySelector(".nav-toggler");
@@ -231,5 +266,7 @@
 
         <script src="battuta.js" ></script>
         <script src="nav.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiKmRh2vEg2hiV1ZIVeyNlxPjVegpChvE&amp;libraries=places&amp;callback=initPlaces" async="" defer=""></script>
+        <script src="autocomp.js"></script>
     </body>
 </html>
