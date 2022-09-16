@@ -103,41 +103,41 @@
                         <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Create Investment Account</label>
-                                <input type="number" id="pamount" name="email" placeholder="Principal Amount" required>    
+                                <input type="number" id="pamount" name="price" placeholder="Principal Amount" required>    
                             </div>
                             
                             <div class="form_body_column"> 
                                 <label for="lname">Effective Date</label>
-                                <input type="date" id="edate" name="email"  required>    
+                                <input type="date" id="edate" name="startdate"  required>    
                             </div>
         
                         </div>
                         <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Tenor</label>
-                                <input type="number" id="tenur" name="email" placeholder="Enter a tenor" required value="12" min="30"> 
+                                <input type="number" id="tenur" name="tenur" placeholder="Enter a tenor" required value="12" min="30"> 
                                 <small id="datecount"> </small>   
                             </div>
                             <div class="form_body_column"> 
                                 <label for="lname">Interest Rate</label>
-                                <input type="number" id="interest" name="email" placeholder="Interest Rate" required value="12">                            </div>
+                                <input type="number" id="interest" name="interest" placeholder="Interest Rate" required value="12">                            </div>
         
                         </div>
 
                         <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Maturity Date</label>
-                                <input type="date" id="mdate" name="email" asp-format="{0:yyyy-MM-dd}"  required >    
+                                <input type="date" id="mdate" name="maturity" asp-format="{0:yyyy-MM-dd}"  required >    
                             </div>
                             <div class="form_body_column"> 
                                 <label for="lname">Interest Amount</label>
-                                <input type="number" id="iamt" name="email" placeholder="Interest Rate" required>                            </div>
+                                <input type="number" id="iamt" name="interestamount" placeholder="Interest Rate" required>                            </div>
                         </div>
                         
                         <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Total Amount Payable at Maturity</label>
-                                <input type="number" id="mdamt" name="email"  required>    
+                                <input type="number" id="mdamt" name="payable"  required>    
                             </div>
 
                             <div class="form_body_column"> 
@@ -160,7 +160,7 @@
    
                             <div class="form_button_row" 
                         >
-                                <input type="submit" value="Request Loan">
+                                <input type="submit" value="Start Investment">
                             </div>
                         </div>
                         
