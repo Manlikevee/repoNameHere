@@ -58,9 +58,13 @@ margin-bottom: 10px;
 }
 .img-area p {
 	color: #999;
+    padding: 3px;
+    color: #999;
+    text-align: center;
 }
 .img-area p span {
 	font-weight: 600;
+
 }
 .img-area img {
 	position: absolute;
@@ -138,6 +142,9 @@ margin-bottom: 10px;
 }
 .img-area2 p {
 	color: #999;
+    padding: 3px;
+    color: #999;
+    text-align: center;
 }
 .img-area2 p span {
 	font-weight: 600;
