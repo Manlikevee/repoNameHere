@@ -1,4 +1,14 @@
+const hideLoading = () => {
+  let overlay = document.getElementsByClassName('loading-overlay')[0]
+
+  // 👇️ hides element (still takes up space on page)
+  overlay.classList.remove('is-active')
+};
+
+
 const getAccountNumber = (account_number,bank_number) => {
+    displayLoading();
+    document.getElementById("accname").value =  ``; 
     fetch( `https://api.paystack.co/bank/resolve?account_number=${account_number}&bank_code=${bank_number}` , {
         headers: {
             "Authorization" : "Bearer sk_test_d1b83ae902e7135db7d879d7121ec665e0a8243d" 
@@ -6,8 +16,9 @@ const getAccountNumber = (account_number,bank_number) => {
       }).then(response => {
         console.log(response);
         if (!response.ok) {
-            throw Error("Invalid Account Number");
+            throw Error("Invalid Account Number");  
         }
+        
         return response.json();
       })
       .then(data => {
@@ -32,10 +43,12 @@ const getAccountNumber = (account_number,bank_number) => {
 accname.value = `${vi}`
 // document.getElementById("myDIV").appendChild(para);
 $('#elementsToOperateOn :input').attr('disabled', true);
+hideLoading();
 
 
       }).catch(error => {
         alert(error)
+        hideLoading();
       } )
 
 
@@ -61,5 +74,11 @@ function myFunction() {
 
 // .then(response => response.json()).then(responseJson => console.log(responseJson))
 
+
+
+const displayLoading = () => {
+  let overlay = document.getElementsByClassName('loading-overlay')[0]
+  overlay.classList.toggle('is-active')
+};
 
 

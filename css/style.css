@@ -440,6 +440,40 @@ color: rgba(0, 0, 0, 0.76);
     border-radius: 3px;
 }
 
+.loading-overlay {
+  display: none;
+	background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99999998;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-overlay.is-active {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  gap: 10px;
+}
+
+.fa-spinner{
+  font-weight: 900;
+  color: white;
+  font-size: 70px;
+}
+
+.loading-overlay p{
+  width: 70%;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  font-size: 19px;
+}
+
   .add_investment button {
     padding: 6px 10px;
     margin-top: 8px;
