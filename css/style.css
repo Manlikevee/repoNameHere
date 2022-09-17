@@ -472,7 +472,10 @@ color: rgba(0, 0, 0, 0.76);
   text-align: center;
   color: white;
   font-size: 19px;
+  line-height: 34px;
 }
+
+
 
   .add_investment button {
     padding: 6px 10px;
@@ -657,6 +660,15 @@ color: #EB7F35;
 
   .crystalcard{
     margin-bottom: 15px;
+  }
+  .loading-overlay p {
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    line-height: normal;
+
   }
 
   .invamtstatus{
