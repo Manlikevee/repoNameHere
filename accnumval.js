@@ -9,6 +9,7 @@ const hideLoading = () => {
 const getAccountNumber = (account_number,bank_number) => {
     displayLoading();
     document.getElementById("accname").value =  ``; 
+    
     fetch( `https://api.paystack.co/bank/resolve?account_number=${account_number}&bank_code=${bank_number}` , {
         headers: {
             "Authorization" : "Bearer sk_test_d1b83ae902e7135db7d879d7121ec665e0a8243d" 
@@ -63,9 +64,10 @@ function myFunction() {
     const bank_number = document.getElementById("app").value;
     console.log(`my variable is ${account_number}`);
     console.log(`my variable is ${bank_number}`);
-   
-    
-    getAccountNumber(account_number, bank_number);
+    const num = document.getElementById("myText").value;
+    if( num.length === 10){
+      getAccountNumber(account_number, bank_number);
+    }
   }
 
 
