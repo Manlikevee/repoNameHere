@@ -1,3 +1,8 @@
+const displayLoading = () => {
+  let overlay = document.getElementsByClassName('loading-overlay')[0]
+  overlay.classList.toggle('is-active')
+};
+
 const hideLoading = () => {
   let overlay = document.getElementsByClassName('loading-overlay')[0]
 
@@ -8,7 +13,7 @@ const hideLoading = () => {
 // const accname = document.getElementById('accname');
 // const dog = document.createElement('p')
 const getAccountNumbers = () => {
-  displayLoading();
+    displayLoading();
     fetch( `https://api.paystack.co/bank/` , {
         headers: {
             "Authorization" : "Bearer sk_test_d1b83ae902e7135db7d879d7121ec665e0a8243d" 
@@ -28,7 +33,7 @@ const getAccountNumbers = () => {
         
         document.querySelector("#app").insertAdjacentHTML("afterbegin", html );
         hideLoading();
-        
+
       }).catch(error => {
         alert(error)
         hideLoading();
@@ -41,9 +46,6 @@ getAccountNumbers();
 
 
 
-const displayLoading = () => {
-  let overlay = document.getElementsByClassName('loading-overlay')[0]
-  overlay.classList.toggle('is-active')
-};
+
 
 
