@@ -44,12 +44,38 @@ const getAccountNumber = (account_number,bank_number) => {
 accname.value = `${vi}`
 // document.getElementById("myDIV").appendChild(para);
 $('#elementsToOperateOn :input').attr('disabled', true);
+
+const num = document.getElementById("myText").value;
+let text = `${vi}`;
+let result = text.toLowerCase().includes("victor");
+let result2 = text.toLowerCase().includes("odah");
+const solution = document.createElement('li');
+if( num.length === 10 && accname !== null){
+  document.getElementById("mtch").classList.remove("show");
+    if (result === true ) {
+     solution.innerHTML = "First Name Match"
+     document.getElementById("mtch").classList.add("show");
+    } else {
+      solution.innerHTML = "First Name is a No Match"
+      document.getElementById("dsa").appendChild(solution);
+    }
+    
+    if (result2 === true) {
+      greeting = "Good day";
+    } else {
+      greeting = "Good evening";
+    }
+}
+
+
+
 hideLoading();
 
 
       }).catch(error => {
         alert(error)
         hideLoading();
+        document.getElementById("mtch").classList.remove("show");
       } )
 
 

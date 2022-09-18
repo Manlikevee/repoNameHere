@@ -19,6 +19,16 @@
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
     </head>
     <body>
+        <style>
+            .hidden{
+                display: none;
+            }
+
+            .show{
+                display: block;
+                color: green;
+            }
+        </style>
         <div class="loading-overlay">
             <span class="fas fa-spinner fa-3x fa-spin"></span>
             <p>
@@ -127,7 +137,9 @@
                         <div class="form_body_column"> 
                             <label for="lname">Account Name</label>
                             <input type="email" id="accname" name="email" placeholder="please validate your account Number"  readonly>    
-      
+    <ul id="dsa">
+<li class="hidden" id="mtch"> Firstname match </li>
+    </ul>
                         </div>
     
                   </div>
