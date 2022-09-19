@@ -20,6 +20,12 @@
     </head>
     <body>
         <style>
+
+            #dsa{
+              
+                grid-gap: 15px;
+
+            }
             .hidden{
                 display: none;
             }
@@ -27,6 +33,14 @@
             .show{
                 display: block;
                 color: green;
+                font-size: smaller;
+            }
+
+            #nomatch2{
+                color: red;
+            }
+            #nomatch{
+                color: red;
             }
         </style>
         <div class="loading-overlay">
@@ -139,6 +153,10 @@
                             <input type="email" id="accname" name="email" placeholder="please validate your account Number"  readonly>    
     <ul id="dsa">
 <li class="hidden" id="mtch"> Firstname match </li>
+<li class="hidden" id="nomatch">First Name Doesnt Match</li>
+
+<li class="hidden" id="mtch2"> Last Name match </li>
+<li class="hidden" id="nomatch2">Last Name Doesnt Match</li>
     </ul>
                         </div>
     
