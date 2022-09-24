@@ -356,3 +356,147 @@ text-decoration: none !important;
         }
     }
 
+
+
+    @import "https://fonts.googleapis.com/css?family=Roboto:400,400i,700";
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  background-size: cover;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    border-radius: 3px;
+    padding: 10px;
+    width: 55%;
+    top: 50%;
+    left: 50%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  margin-right: 20px;
+  font-size: 28px;
+  line-height: 3rem;
+  font-weight: bold;
+}
+.close:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin-bottom: 35px;
+}
+
+.myimagecontainer{
+  width: 100%;
+  margin: auto;
+  height: 100%;
+
+  text-align: justify;
+}
+
+.twosides{
+  padding: 30px;
+  display: flex;
+  gap: 10px;
+  
+}
+.artistname{
+  font-size: 2.1rem;
+  line-height: 2.35rem;
+  margin: 0 0 50px;
+  font-weight: 200;
+  color: #010101;
+  margin: 0 0 15px;
+}
+
+.imagephototitle{
+  text-transform: uppercase;
+    letter-spacing: .16em;
+    font-weight: 200;
+    color: #010101;
+    font-size: 1.25rem;
+    line-height: 1.4em;
+}
+.sidefortxt{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.sideforima{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sideforima img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .twosides{
+  width: 80%;
+  margin: auto;
+display: flex;
+flex-direction: column;
+    
+  }
+  .twosides{
+    padding: 4px; 
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    border-radius: 3px;
+    padding: 10px;
+    max-width: 500px;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sideforima img{
+  object-fit: contain;
+  width: 100%;
+  height: 200px;
+}
+.sidefortxt{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 3px;
+}
+}

@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="styless.css">
+        <link rel="stylesheet" href="css/createinvestment.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -145,7 +146,7 @@ Access Bank(card)
                 </div>
                 <div class="inticon">
             
-                    <i class='bx bx-edit-alt'></i>
+                    <i class='bx bx-edit-alt modalBtn' toggle-modal="1" ></i>
                 </div>
             </div>
             <div class="introccontent">
@@ -182,7 +183,7 @@ Access Bank(card)
     </div>
     <div class="inticon">
 
-        <i class='bx bx-edit-alt'></i>
+        <i class='bx bx-edit-alt modalBtn' toggle-modal="2"></i>
     </div>
 </div>
 
@@ -237,7 +238,7 @@ Access Bank(card)
                 </div>
                 <div class="inticon">
             
-                    <i class='bx bx-edit-alt'></i>
+                    <i class='bx bx-edit-alt modalBtn' toggle-modal="3"></i>
                 </div>
             </div>
 
@@ -350,7 +351,175 @@ Access Bank(card)
 </div>
 
 </div>
-        
+      
+<div id="3" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="myimagecontainer">
+        <div class="create_investment_form creativeform1">
+            
+            <div class="investment_form_title">
+                <h3>Signup</h3>
+                <p class="innerdog">
+                    Your personal details will help Crystal Finance know you and contact you easily.
+                </p>
+            </div>
+
+            <div class="form_body">
+
+                <div class="form_body_row">
+                    <div class="form_body_column"> 
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="l_name" name="last_name" placeholder="Last name">    
+                    </div>
+                    <div class="form_body_column"> 
+                        <label for="fname">First Name</label>
+                    
+                        <input type="text" id="f_name" name="first_name" placeholder="First name.">
+                    </div>
+                </div>
+
+                <div class="form_body_row">
+                    <div class="form_body_column"> 
+                        <label for="Mname">Middle name</label>
+                       
+                        <input type="text" id="m_name" name="middle_name" placeholder="Middle name.">   
+                    </div>
+                    <div class="form_body_column"> 
+                        <label for="fname">Phone Number </label>
+                        <input type="tel" id="phone" name="phonenumber" placeholder="Phone number">    
+                    </div>
+                </div>
+
+                <div class="form_body_row">
+                    <div class="form_body_column"> 
+                        <label for="fname">Email Address</label>
+                        <input type="email" id="id_email" name="email" placeholder="Email address">    
+                    </div>
+                    <div class="form_body_column"> 
+                        <label for="Password">Password</label>
+                        <input type="password" name="id_password" id="" placeholder="password">
+                    </div>
+                </div>
+
+                <div class="form_body_row" >
+   
+                    <div class="form_button_row" style="
+                    width: 100%;
+                ">
+                        <input type="submit" value="Create Account">
+                    </div>
+                </div>
+
+                <div class="passworddog">
+                    Already have an account? <span><a href="login.html">Sign In</a> </span> 
+                </div>
+
+
+            </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div id="2" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="myimagecontainer">
+  
+        <div class="twosides">
+          <div class="sidefortxt">
+            <div class="artistname">MAHA AHMED</div>
+            <div class="imgphototitle">TITLE: FISH-BOWL I, 2020</div>
+            <div class="imgphototype">Gouache on paper</div>
+            <div class="imagephotosize">
+              Painting size
+              <p>
+                21 x 19 cm
+              </p>
+            </div>
+            <div class="imageframesize">
+              Framed Size:
+              <p>
+                44 x 32 cm
+              </p>
+            </div>
+            <div class="copyright">
+              Copyright The Artist
+            </div>
+  
+            <div class="viewonwall"></div>
+          </div>
+          <div class="sideforima">
+            <img src="https://images.unsplash.com/photo-1657053076996-15fc97b963ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <div id="1" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="myimagecontainer">
+  
+        <div class="twosides">
+          <div class="sidefortxt">
+            <div class="artistname">MAHA AHMED</div>
+            <div class="imgphototitle">TITLE: FISH-BOWL I, 2020</div>
+            <div class="imgphototype">Gouache on paper</div>
+            <div class="imagephotosize">
+              Painting size
+              <p>
+                21 x 19 cm
+              </p>
+            </div>
+            <div class="imageframesize">
+              Framed Size:
+              <p>
+                44 x 32 cm
+              </p>
+            </div>
+            <div class="copyright">
+              Copyright The Artist
+            </div>
+  
+            <div class="viewonwall"></div>
+          </div>
+          <div class="sideforima">
+            <img src="https://images.unsplash.com/photo-1657053076996-15fc97b963ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+    $(".modalBtn").click(function() {
+  // Get the ID name for the modal from the data-attribute
+  var id = $(this).attr('toggle-modal'); 
+  // Use the ID from associated Modal that matches the attriutes name
+  var modal = document.getElementById(id);
+  // Get Modal close button
+  var closeModalBtn = document.getElementsByClassName("close");
+  // Open Modal
+  modal.style.display = "block";
+    // Close Modal when clicking anywhere outside of modal
+
+  // Close Modal Function
+  function closeModal() {
+    modal.style.display = "none";  
+  }
+  for (var i = 0; i <= closeModalBtn.length; i += 1) {
+    closeModalBtn[i].onclick = closeModal;
+  }
+});
+</script>
+
 <script>
             
     const navToggler = document.querySelector(".nav-toggler");
