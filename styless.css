@@ -293,5 +293,9 @@ text-decoration: none !important;
         .sbsbs{
             width: 98% !important;
         }
+
+        table.dataTable.nowrap th, table.dataTable.nowrap td {
+            white-space: pre-wrap;
+        }
     }
 
