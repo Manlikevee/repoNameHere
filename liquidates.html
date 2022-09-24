@@ -13,11 +13,134 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/createinvestment.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+        <style>
+            .popup {
+            background-color: #fff;
+            width: 400px;
+            padding: 30px 40px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 8px;
+            display: block;
+        }
+        .popup #close {
+            display: block;
+            margin-top: -10px;
+            float: right;
+            background-color: transparent;
+            font-size: 35px;
+            color: #c5c5c5;
+            outline: none;
+            cursor: pointer;
+        }
+        .popup p {
+            font-size: 14px;
+            text-align: justify;
+            margin: 20px 0;
+        }
+        .loading-over {
+  display: none;
+	background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99999998;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.secoact{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.logobod{
+    text-align: center;
+font-size: 16px;
+font-weight: 300;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: center;
+color: rgba(0, 0, 0, 1);
+
+
+}
+
+.logomen{
+  
+font-size: 18px;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: justified;
+color: rgba(0, 0, 0, 1);
+
+}
+.logobtn{
+    margin-top: 5px;
+}
+.arwbtn {
+    width: 100%;
+    background: rgba(235, 127, 53, 1);
+    color: white;
+    padding: 8px 18px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .arwbtn:hover {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #EB7F35;
+    color: #000;
+  }
+@media screen and (max-width: 600px) {
+    .popup {
+        width: 90%;
+        margin: auto;
+      }
+    
+}
+        </style>
+<div class="loading-over">
+    <div class="popup">
+        <p id="close">&times;</p>
+        <br>
+<div class="secoact">
+    <div class="logoac">
+
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M39.8166 0.833008C18.3219 0.833008 0.833984 18.4032 0.833984 39.9997C0.833984 61.5962 18.4042 79.1663 40.0007 79.1663C61.5972 79.1663 79.1673 61.5962 79.1673 39.9997C79.1673 18.4032 61.5149 0.833008 39.8166 0.833008ZM43.9173 59.583H36.084V51.7497H43.9173V59.583ZM43.9173 43.9163H36.084V20.4163H43.9173V43.9163Z" fill="#EB7F35"/>
+            </svg>
+            
+
+    </div>
+    <div class="logomen"> Tenor < 180 days </div>
+    <div class="logobod">
+        Cannot liquidate investment, Please use the Part-liquidation module.
+    </div>
+    <div class="logobtn">
+ 
+            <a href="" type="button"  class="arwbtn"> Proceed </a>
+     
+    </div>
+</div>
+    </div>
+</div>
+   
+
+
         <header class="header" data-header>
             <div class="container">
                 <div class="row align-items-center justify-content-between">
@@ -68,113 +191,88 @@
                 <div class="create_investment_header1">
                     <div class="back">
                     
-                        Profile Update
+                        Fixed Deposit
                     </div>
             
                     <div class="close">
                         <i class="fa fa-times fa-1x" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="progressdiv">
-                    <div class="progress">
-                        <div data-progress="80"> </div>
-                      </div>
-                </div>
-                <script src="progressbar.js"></script>
                 <div class="create_investment_form creativeform2 creativeform23">
                     
                     <div class="investment_form_title">
-                        <h3>Security Question</h3>
-
+                        <h3>Liquidation</h3>
                     </div>
-      <form action="" method="post"> 
+        
+
                     <div class="form_body">
+
+                        <div class="form_body_row">
+                            <div class="form_body_column"> 
+                                <label for="fname">Principal</label>
+                                <input type="text" id="fname" name="principal" placeholder="Current Principal">    
+                            </div>
+                            <div class="form_body_column"> 
+                                <label for="fname">Rate</label>
+                                <input type="text" id="fname" name="Rate" placeholder="Tenor">
+                            </div>
+                        </div>
         
                         <div class="form_body_row">
                             <div class="form_body_column"> 
-                                <label for="lname">Security Question</label>
-                                <select class="select2 B" name="securityquestion" id="app" >
-<option selected value="">Pick a security question</option>
-                                </select>      
+                                <label for="fname">Tenor</label>
+                                <input type="text" id="fname" name="Tenor" placeholder="Tenor">    
+                            </div>
+                            <div class="form_body_column"> 
+                                <label for="fname">Effective Date</label>
+                                <input type="text" id="fname" name="Effective Date" placeholder="Effective Date">
                             </div>
                         </div>
-
                         <div class="form_body_row">
                             <div class="form_body_column"> 
-                                <label for="lname">Answer</label>
-                             <textarea name="" id="" cols="10" rows="10" name="securityanswer"></textarea>
-
-                                    
+                                <label for="fname">Maturity Date</label>
+                                <input type="text" id="fname" name="Amount at Maturity" placeholder="Amount at Maturity">    
+                            </div>
+                            <div class="form_body_column"> 
+                                <label for="fname">Amount at Maturity</label>
+                                <input type="text" id="fname" name="Amount at Maturity" placeholder="Amount at Maturity">
                             </div>
                         </div>
-
-
-                        <div class="form_body_row botonn" >
-
-                            <div class="form_body_column"> 
-   
-                                <div class="linkbtn">
-                                        <a href="http://" class="blackboton">Prev </a>
-                                    </div>
-                            </div>
+        
+                        
+                        <div class="form_body_row" >
    
                             <div class="form_button_row" 
                         >
                                 <input type="submit" value="Create Account">
                             </div>
                         </div>
-                        
-        
-        
-
-        
-        
         
                     </div>
-                </form> 
                 </div>
             </div>
         
         
         </div>
 
-<script>
 
-var country = [
-    {
-        "id": "1",
-        "name": "Mumbai",
-        "state": "Maharashtra"
-    },
-    {
-        "id": "2",
-        "name": "Delhi",
-        "state": "Delhi"
-    },
-    {
-        "id": "3",
-        "name": "Bengaluru",
-        "state": "Karnataka"
-    },]
+
+
+        <script>
+            window.addEventListener("load", function () {
+        setTimeout(
+            function open(event) {
+                document.querySelector(".loading-over").style.display = "block";
+            },
+            2000
+        )
+    })
     
-for(x in country ){
-  var sel = document.createElement("option");
-  sel.innerHTML = country[x].name;
-  sel.value  = country[x].name;
-  document.getElementById("app").appendChild(sel);
-}
+    document.querySelector('#close').addEventListener("click", function () {
+        document.querySelector(".loading-over").style.display = "none";
+    });
+        </script>
 
-
-</script>
-
-
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js'></script>
-
-<script>
-    $('.select2').select2({
-});
-</script>
 
 <script>
             
@@ -193,6 +291,7 @@ for(x in country ){
        }
     } 
            </script> 
+
         <script src="" async defer></script>
         <script src="nav.js"></script>
     </body>

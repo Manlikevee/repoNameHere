@@ -15,7 +15,33 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-
+<style>
+    .popup {
+    background-color: #fff;
+    width: 450px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    display: none;
+}
+.popup #close {
+    display: block;
+    margin: 0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    outline: none;
+    cursor: pointer;
+}
+.popup p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+}
+</style>
         <header class="header" data-header>
             <div class="container">
                 <div class="row align-items-center justify-content-between">
@@ -59,6 +85,21 @@
                 </div>
             </div>
          </header>
+
+         <div id="mypop" style="width: 60%; margin:auto;">
+
+            <div class="popup">
+                <button id="close">&times;</button>
+                <h2>Coronavirus</h2>
+                <p>Before departing , you should pay attention to the relevant boarding, quarantine and inspection
+                    arrangements.</p>
+                <p>All transit/transfer passengers boarding from overseas regions to Hong Kong must hold a Negative result proof
+                    of a PCR-based nucleic acid test for COVID-19.</p>
+                <p>All immigrants must submit a health declaration form.</p>
+            </div>
+
+         </div>
+
 
 
 <div class="main-content mbsma container">
@@ -4221,6 +4262,22 @@
        }
     } 
            </script>
+    <script>
+        window.addEventListener("load", function () {
+    setTimeout(
+        function open(event) {
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000
+    )
+})
+
+document.querySelector('#close').addEventListener("click", function () {
+    document.querySelector(".popup").style.display = "none";
+});
+    </script>
+
+
 
         <script src="" async defer></script>
         <script src="nav.js"></script>

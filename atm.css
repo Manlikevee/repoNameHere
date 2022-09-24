@@ -88,19 +88,19 @@
     }
     
     .name {
-      font-size: 0.5rem;
+      font-size: 0.7rem;
       left: 40px;
       bottom: 35px;
     }
     
     .from {
-      font-size: 0.5rem;
+      font-size: 0.7rem;
       bottom: 35px;
       right: 110px;
     }
     
     .to {
-      font-size: 0.5rem;
+      font-size: 0.7rem;
       bottom: 35px;
       right: 40px;
     }

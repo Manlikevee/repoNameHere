@@ -13,11 +13,150 @@
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/createinvestment.css">
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/createinvestment.css' %}">
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-     
+
+        <style>
+            .popup {
+            background-color: #fff;
+            width: 400px;
+            padding: 30px 40px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 8px;
+            display: block;
+        }
+        .popup #close {
+            display: block;
+            margin-top: -20px;
+            float: right;
+            background-color: transparent;
+            font-size: 35px;
+            color: #c5c5c5;
+            outline: none;
+            cursor: pointer;
+        }
+        .popup p {
+            font-size: 14px;
+            text-align: justify;
+            margin: 20px 0;
+        }
+        .loading-over {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999998;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    
+    .secoact{
+        width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    }
+    .logobod{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+    
+    
+    }
+    
+    .logomen{
+    
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: justified;
+    color: rgba(0, 0, 0, 1);
+    
+    }
+    .logobtn{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    }
+    .arwbtn {
+    width: 100%;
+    background: rgba(235, 127, 53, 1);
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    
+    .arwbtn:hover {
+    background-color: rgb(245, 245, 245);
+    border: 1px solid #EB7F35;
+    color: #000;
+    }
+    @media screen and (max-width: 600px) {
+    .popup {
+        width: 90%;
+        margin: auto;
+      }
+    
+    }
+        </style>
+
+
+        <div class="loading-over">
+            <div class="popup">
+                <p id="close">&times;</p>
+                <br>
+            <div class="secoact">
+            <div class="logoac">
+<!--         
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.8166 0.833008C18.3219 0.833008 0.833984 18.4032 0.833984 39.9997C0.833984 61.5962 18.4042 79.1663 40.0007 79.1663C61.5972 79.1663 79.1673 61.5962 79.1673 39.9997C79.1673 18.4032 61.5149 0.833008 39.8166 0.833008ZM43.9173 59.583H36.084V51.7497H43.9173V59.583ZM43.9173 43.9163H36.084V20.4163H43.9173V43.9163Z" fill="#EB7F35"/>
+                    </svg> -->
+                    
+
+                    <svg width="73" height="72" viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" width="72" height="72" rx="36" fill="#08A534"/>
+                        <path d="M50.536 23.9932C50.024 23.9932 49.49 24.1612 49.1 24.5452L31.686 41.7331C31.172 42.2391 30.656 42.1452 30.252 41.5492L24.26 32.7092C23.648 31.8072 22.368 31.5552 21.45 32.1572C20.5339 32.7592 20.278 34.0172 20.89 34.9192L26.88 43.7591C28.684 46.4171 32.198 46.7552 34.496 44.4952L51.972 27.3691C52.75 26.6011 52.75 25.3132 51.972 24.5452C51.582 24.1612 51.046 23.9932 50.536 23.9932Z" fill="white"/>
+                        </svg>
+                    
+                    
+            
+            </div>
+            <div class="logomen"> successful </div>
+            <div class="logobod">
+                Your Investment in Fixed Deposit is successfully completed. 
+            </div>
+            <div class="logobtn">
+            
+                    <a href="" type="button"  class="arwbtn"> Proceed </a>
+             
+            </div>
+            </div>
+            </div>
+            </div>
+        
+
+
         <header class="header" data-header>
             <div class="container">
                 <div class="row align-items-center justify-content-between">
@@ -64,12 +203,12 @@
                 <div class="form_body_row">
                     <div class="form_body_column"> 
                         <label for="lname">Last Name</label>
-                        <input type="text" id="fname" name="last_name" placeholder="Last name">    
+                        <input type="text" id="l_name" name="last_name" placeholder="Last name">    
                     </div>
                     <div class="form_body_column"> 
                         <label for="fname">First Name</label>
                     
-                        <input type="text" id="fname" name="last_name" placeholder="First name.">
+                        <input type="text" id="f_name" name="first_name" placeholder="First name.">
                     </div>
                 </div>
 
@@ -77,22 +216,22 @@
                     <div class="form_body_column"> 
                         <label for="Mname">Middle name</label>
                        
-                        <input type="text" id="fname" name="last_name" placeholder="Middle name.">   
+                        <input type="text" id="m_name" name="middle_name" placeholder="Middle name.">   
                     </div>
                     <div class="form_body_column"> 
                         <label for="fname">Phone Number </label>
-                        <input type="tel" id="fname" name="firstname" placeholder="Phone number">    
+                        <input type="tel" id="phone" name="phonenumber" placeholder="Phone number">    
                     </div>
                 </div>
 
                 <div class="form_body_row">
                     <div class="form_body_column"> 
                         <label for="fname">Email Address</label>
-                        <input type="email" id="fname" name="firstname" placeholder="Email address">    
+                        <input type="email" id="id_email" name="email" placeholder="Email address">    
                     </div>
                     <div class="form_body_column"> 
                         <label for="Password">Password</label>
-                        <input type="password" name="" id="" >
+                        <input type="password" name="id_password" id="" placeholder="password">
                     </div>
                 </div>
 
@@ -117,6 +256,7 @@
 
 </div>
         
+
         <script>
             
  const navToggler = document.querySelector(".nav-toggler");
@@ -134,6 +274,26 @@
     }
  } 
         </script>
+
+<script>
+    window.addEventListener("load", function () {
+setTimeout(
+    function open(event) {
+        document.querySelector(".loading-over").style.display = "block";
+    },
+    2000
+)
+})
+
+document.querySelector('#close').addEventListener("click", function () {
+document.querySelector(".loading-over").style.display = "none";
+});
+</script>
+
+
+
         <script src="nav.js"></script>
+        <script src="{% static 'js/nav.js' %}"></script>
+
     </body>
 </html>

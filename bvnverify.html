@@ -10,9 +10,11 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+     
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/createinvestment.css">
+
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -84,9 +86,19 @@
 
 <div class="main-content container22">
 
-    <div class="mycontent mycontents">
+    <div class="mycontent mycontents" style="flex-direction: column;">
+        <div class="create_investment_header1">
+            <div class="back">
+            
+                Profile Update
+            </div>
+    
+            <div class="close">
+                <i class="fa fa-times fa-1x" aria-hidden="true"></i>
+            </div>
+        </div>
 
-        <div class="create_investment_form creativeform1">
+        <div class="create_investment_form creativeform2 creativeform23">
             
             <div class="investment_form_title">
                 <h3>BVN VERIFICATION</h3>
@@ -105,13 +117,13 @@
                 <div class="form_body_row">
                     <div class="form_body_column"> 
                         <label for="lname">First Name</label>
-                        <input type="text" id="username" name="last_name" placeholder="Fist Name ">  
+                        <input type="text" id="username" name="first_name" placeholder="Fist Name " value="{{request.user.first_name}}">  
                         <div class="error"></div>  
                     </div>
                     <div class="form_body_column"> 
                         <label for="fname">Last  Name</label>
                     
-                        <input type="text" id="email" name="last_name" placeholder="Last name.">
+                        <input type="text" id="email" name="last_name" placeholder="Last name." value="{{request.user.flast_name}}">
                         <div class="error"></div>
                     </div>
                 </div>
@@ -120,13 +132,13 @@
 
                     <div class="form_body_column"> 
                         <label for="fname">Middle Name </label>
-                        <input type="text" id="password2" name="firstname" placeholder="Phone number">    
+                        <input type="text" id="password2" name="firstname" placeholder="Phone number" value="request.user.profile.middle_name">    
                         <div class="error"></div>
                     </div>
 
                     <div class="form_body_column"> 
                         <label for="Mname">dob</label>
-                        <input type="date" id="password" name="last_name" placeholder="Middle name.">   
+                        <input type="date" id="password" name="last_name" placeholder="Middle name." value="2023-01-10">   
                         <div class="error"></div>
                     </div>
 
@@ -149,10 +161,6 @@
                 ">
                         <input type="submit" value="Create Account">
                     </div>
-                </div>
-
-                <div class="passworddog">
-                    Already have an account? <span><a href="login.html">Sign In</a> </span> 
                 </div>
 
 

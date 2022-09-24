@@ -10,6 +10,12 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/createinvestment.css' %}">
+        <link rel="stylesheet" href="{% static 'css/atm.css' %}">
+
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/createinvestment.css">
@@ -97,6 +103,11 @@
                         <i class="fa fa-times fa-1x" aria-hidden="true"></i>
                     </div>
                 </div>
+                <div class="progressdiv">
+                    <div class="progress">
+                        <div data-progress="20"> </div>
+                      </div>
+                </div>
                 <div class="create_investment_form creativeform2 creativeform23">
                     
                     <div class="investment_form_title">
@@ -126,8 +137,12 @@
                         <div class="form_body_row">
                             <div class="form_body_column"> 
 
+                                   
+                                
 
-
+                                {% if search_result %}
+                            
+                                {% if search_result.success %}
 <div class="form_body_row">
     <table>
         <caption>Statement Summary</caption>
@@ -141,10 +156,10 @@
         </thead>
         <tbody>
           <tr>
-            <td data-label="Account">Visa - 3412</td>
-            <td data-label="Due Date">Access Bank</td>
-            <td data-label="Amount">$1,190</td>
-            <td data-label="Period">No</td>
+            <td data-label="Account">{{ search_result.data.reference }}</td>
+            <td data-label="Due Date">{{search_result.message}}</td>
+            <td data-label="Amount">{{ search_result.data.amount }}</td>
+            <td data-label="Period">{{ search_result.data.status }}</td>
           </tr>
 
         </tbody>
@@ -152,15 +167,33 @@
 
 
 </div>
-<!-- <div class="form_body_row">
-    <div class="form_body_columm">AMOUNT</div>
-    <div class="form_body_columm amount">200,000</div>
+<br>
+<hr>
+<br>
+<div class="form_body_row">
+    <br>
+ 
+    <div class="form_body_columm">
+       <h3>Full Detail Of Payment</h3>
+       <p>
+        
+       </p>
+      <p><b>AMOUNT</b>   : Lorem ipsum dolor sit amet.</p> 
+      <p>  <b>AMOUNT</b> : Lorem ipsum dolor sit amet.</p> 
+      <p> <b>AMOUNT</b> : Lorem ipsum dolor sit amet.</p> 
+      <p> <b>AMOUNT</b> : Lorem ipsum dolor sit amet.</p> 
+      <p> <b>AMOUNT</b> : Lorem ipsum dolor sit amet.</p> 
+      <p> <b>AMOUNT</b> : Lorem ipsum dolor sit amet.</p> 
     </div>
+    </div>
+    {% else %}
+    {{ search_result.message }}
+    {% endif %}
+    {% endif %}
 
     <div class="form_body_row">
         <div class="form_body_columm">CONFIRMATION</div>
-        <div class="form_body_columm confirmation">NOT CONFIRMED</div>
-        </div> -->
+        </div>
                            
 
                                     
@@ -210,6 +243,8 @@
     } 
            </script> 
         <script src="" async defer></script>
+        <script src="progressbar.js"></script>
         <script src="nav.js"></script>
+        <script src="{% static 'js/nav.js' %}"></script>
     </body>
 </html>

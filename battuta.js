@@ -2,7 +2,7 @@ $(document).ready(function() {
     //-------------------------------SELECT CASCADING-------------------------//
     var selectedCountry = (selectedRegion = selectedCity = "");
     // This is a demo API key for testing purposes. You should rather request your API key (free) from http://battuta.medunes.net/
-    var BATTUTA_KEY = "89932721e773f50adbb8ca416a753937";
+    var BATTUTA_KEY = "ebd4771475a538e302a0ffa08ca3898b";
     // Populate country select box from battuta API
     url =
       "https://battuta.medunes.net/api/country/all/?key=" +

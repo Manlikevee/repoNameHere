@@ -8,6 +8,10 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+
+
+
 :root{
 
 
@@ -29,6 +33,58 @@ margin-right: auto;
   grid-gap: 12px;
 }
 
+.progressdiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.progress *:not([data-progress]) {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.progressdiv{
+  width: 850px;
+  background-color: white;
+
+}
+.progress {
+  width: 100%;
+  max-width: 80%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.progress [data-progress] {
+  height: 17px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.35) inset;
+  border-radius: 7px;
+  margin: 5px 0 10px 0;
+  overflow: hidden;
+}
+
+[data-progress]::after {
+  content: "";
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: linear-gradient(#ed7d31, #ed7d31 50%, #EB7F35 50%);
+  width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 10px;
+  color: white;
+  padding: 0 3px;
+  transition: 2s;
+}
+
+[data-progress].animate-progress::after {
+  content: attr(data-progress) "%";
+  width: var(--animate-progress);
+}
+
 .create_investment_header1 {
   width: 80%;
   background: rgba(115, 115, 115, 1);
@@ -37,7 +93,7 @@ margin-right: auto;
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 17px;
+  padding: 12px;
 }
 
 
@@ -133,10 +189,16 @@ body{
   position: sticky;
   position: sticky;
   top: 10%; 
-  background-color: white;
-  border-radius: 5px;
-}
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
 
+}
+.table td, .table th {
+
+  vertical-align: middle !important;
+  
+}
 .buttonflexto1{
   display: flex;
   grid-gap: 10px;
@@ -153,7 +215,9 @@ body{
   display: flex;
   flex-direction: column;
   grid-gap: 10px;
+  border-radius: 5px;
   padding: 20px;
+  background-color: white;
 }
 
 .introccontent{
@@ -504,6 +568,18 @@ text-align: left;
     margin-bottom: 60px;
     padding: 25px;
    }
+   .imagecop {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    width: 130px;
+    border-radius: 9px;
+    border-radius: 50%;
+    top: 50px;
+    left: 40%;
+    border: 3px solid #999;
+}
 
 
 
@@ -516,7 +592,7 @@ text-align: left;
   }
   .userflexboxside1{
     width: 100%;
-    background-color: white;
+
   }
 
   .nxtops{
@@ -858,7 +934,7 @@ margin-right: 5px;
 
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 880px) {
 
   .userprofileflexboxcontent{
     display: flex;
@@ -874,7 +950,7 @@ margin-right: 5px;
   .userflexboxside1{
     width: 100%;
     margin: auto;
-    background-color: white;
+
   }
 
 }
@@ -889,7 +965,7 @@ margin-right: 5px;
   .userflexboxside1{
     width: 100%;
     margin: auto;
-    background-color: white;
+
   }
 
 }

@@ -52,6 +52,14 @@ input[type=text],[type=email], [type=password], [type=number],  [type=tel], [typ
 
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
 input:focus{
 outline-color: #EB7F35;
   
@@ -166,6 +174,7 @@ outline-color: #EB7F35;
   }
   
   input[type=submit] {
+    font-family: inherit;
     width: 100%;
     background: rgba(235, 127, 53, 1);
     color: white;
@@ -175,7 +184,30 @@ outline-color: #EB7F35;
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .blackboton{
+    width: 100%;
+    background: rgba(34, 34, 34, 1);
+    color: white;
+    padding: 14px 27px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .blackboton:hover{
+    background-color: rgb(245, 245, 245);
+    border: 1px solid rgba(34, 34, 34, 1);
+    color: #000;
+  }
   
+.botonn{
+  justify-content: center;
+  align-items: baseline;
+  flex-direction: row !important;
+}
+
   input[type=submit]:hover {
     background-color: rgb(245, 245, 245);
     border: 1px solid #EB7F35;
@@ -434,7 +466,7 @@ margin-top: 5px;
   width: 480px;
   margin: auto;
   margin-top: 2px;
-  padding: 50px;
+  padding: 40px;
  
   
 }
@@ -443,24 +475,28 @@ margin-top: 5px;
 
 
 .creativeform23{
-  width: 900px;
+  width: 850px;
   height: 70vh;
   overflow: scroll;
 
 }
 .create_investment_header1{
-  width: 900px;
+  width: 850px;
 }
 
 @media only screen and (max-width: 1100px) {
   .creativeform23{
-    width: 98%;
+    width: 100%;
   }
   .create_investment_form.creativeform2 {
     margin-top: auto;
 }
   .create_investment_header1{
-    width: 98%;
+    width: 100%;
+  }
+  .progressdiv{
+    width: 100%;
+  
   }
   
 }
@@ -483,7 +519,7 @@ margin-top: 5px;
 }
 
 .create_investment_header1{
-  width: 98%;
+  width: 100%;
 }
 
 .headercontainer{

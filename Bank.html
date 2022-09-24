@@ -113,14 +113,14 @@
                         <h3>Account Information</h3>
 
                     </div>
-        
+        <form action="" method="post">
                     <div class="form_body">
         
   
                         <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Bank Name</label>
-                                <select class="select2 B" name="producttype" id="app" >
+                                <select class="select2 B" name="bankcode" id="app" >
 
                                   </select>     
                             </div>
@@ -131,7 +131,7 @@
                         <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Account Number</label>
-                                <input type="number"  id="myText" name="enter account number" placeholder="Enter Your Account Number" onkeyup="myFunction()">    
+                                <input type="number"  id="myText" name="accountnumber" placeholder="Enter Your Account Number" onkeyup="myFunction()">    
                             </div>
         
                       </div>
@@ -150,7 +150,7 @@
                       <div class="form_body_row">
                         <div class="form_body_column"> 
                             <label for="lname">Account Name</label>
-                            <input type="email" id="accname" name="email" placeholder="please validate your account Number"  readonly>    
+                            <input type="text" id="accname" name="accountname" placeholder="please validate your account Number"  readonly>    
     <ul id="dsa">
 <li class="hidden" id="mtch"> Firstname match </li>
 <li class="hidden" id="nomatch">First Name Doesnt Match</li>
@@ -163,8 +163,15 @@
                   </div>
 
                   
-                  <div class="form_body_row" >
-   
+                  <div class="form_body_row botonn" >
+
+                    <div class="form_body_column"> 
+
+                        <div class="linkbtn">
+                                <a href="http://" class="blackboton">Prev </a>
+                            </div>
+                    </div>
+
                     <div class="form_button_row" 
                 >
                         <input type="submit" value="Create Account">
@@ -180,6 +187,7 @@
         
         
                     </div>
+                </form>
                 </div>
             </div>
         

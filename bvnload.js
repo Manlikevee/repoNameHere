@@ -1,17 +1,3 @@
-// function myFunction() {
-
-//     const account_number = document.getElementById("myText").value;
-//     const bank_number = document.getElementById("subwaystation").value;
-//     console.log(`my variable is ${account_number}`);
-//     console.log(`my variable is ${bank_number}`);
-   
-    
-//     myFunctions(account_number);
-//   }
- 
-
-
-
 function myFunctions() {
 const options = {
 method: 'POST',
@@ -29,18 +15,18 @@ fetch('https://api.okra.ng/v2/sandbox/products/kyc/bvn-verify', options)
 .then(response => response.json())
 .then(response => {
     console.log(response)
-    alert(response.data.identity.fullname)
+    alert(response.data.fullname)
         // Create element:
-const vi = response.data.identity.fullname
-const f_name = response.data.identity.firstname
-const l_name = response.data.identity.lastname
-const m_name = response.data.identity.middlename
-const lga = response.data.identity.lga_of_origin
-const nationality = response.data.identity.nationality
-const addresss = response.data.identity.lga_of_origin
-const nin = response.data.identity.nin
-const dob = response.data.identity.dob
-const arraytest = response.data.identity.email[1]
+const vi = response.data.fullname
+const f_name = response.data.firstname
+const l_name = response.data.lastname
+const m_name = response.data.middlename
+const lga = response.data.lga_of_origin
+const nationality = response.data.nationality
+const addresss = response.data.lga_of_origin
+const nin = response.data.nin
+const dob = response.data.dob
+const arraytest = response.data.email[1]
 const para = document.createElement("p");
 para.innerHTML = `my variable is ${vi} , <p>  ${addresss}  </p> , <p>  ${nin}  </p>,  <p>  ${dob}  </p> ,  <p>  ${nationality}  </p>, <p>  ${lga}  </p>  `;
 console.log(para)

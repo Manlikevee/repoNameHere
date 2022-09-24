@@ -13,7 +13,11 @@
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/createinvestment.css">
-        
+
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/createinvestment.css' %}">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -54,26 +58,27 @@
                 <p class="innerdog">
                     Your personal details will help Crystal Finance know and contact you easily.                </p>
             </div>
-
+<form action="" method="POST">
             <div class="form_body">
 
                 <div class="form_body_row">
                     <div class="form_body_column"> 
-                        <label for="lname">Email Address</label>
-                        <input type="email" id="fname" name="email" placeholder="Email Address">    
+                        <label for="email">Email Address</label>
+                        <input type="email" id="id_name" name="email" placeholder="Email Address">    
                     </div>
 
                 </div>
 
                 <div class="form_body_row">
                     <div class="form_body_column"> 
-                        <label for="lname">Password</label>
-                        <input type="password" id="fname" name="password" placeholder="*********">    
+                        <label for="password">Password</label>
+                        <input type="password" id="id_password" name="password" placeholder="*********">    
                     </div>
 
                 </div>
 
                 <div class="fpas">
+                    <!-- {% url 'home' %} -->
                   <a href="forgotpassword.html">Forgot Password ?</a>  
 
                 </div>
@@ -98,6 +103,7 @@
 
 
             </div>
+</form>
         </div>
     </div>
 
@@ -122,5 +128,6 @@
  } 
         </script>
         <script src="nav.js"></script>
+        <script src="{% static 'js/nav.js' %}"></script>
     </body>
 </html>
