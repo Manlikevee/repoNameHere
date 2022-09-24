@@ -266,6 +266,13 @@ text-decoration: none !important;
          left: 40%;
          border: 3px solid #999;
      }
+     .tabled{
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        padding: 19px;
+        margin-bottom: 40px;
+    }
     }
 
     @media(max-width:591px){
@@ -281,6 +288,10 @@ text-decoration: none !important;
             top: 50px;
             left: 31%;
             border: 3px solid #999;
+        }
+
+        .sbsbs{
+            width: 98% !important;
         }
     }
 
