@@ -13,7 +13,9 @@ html{
     border: 2px dotted #999;
     padding: 5px;
 }
-
+.inticon i{
+    font-size: 17px;
+}
 .banklogo{
     width: 20%;
     height: 100%;

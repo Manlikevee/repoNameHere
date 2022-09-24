@@ -266,7 +266,7 @@ color:rgba(114, 114, 114, 1);
 .inthead{
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
   background-color: rgba(235, 127, 53, 0.3);
   padding: 7px;
   border-radius: 9px;
