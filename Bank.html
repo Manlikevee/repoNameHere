@@ -120,12 +120,14 @@
                         <div class="form_body_row">
                             <div class="form_body_column"> 
                                 <label for="lname">Bank Name</label>
-                                <select class="select2 B" name="bankcode" id="app" >
+                                <select class="select2 B" name="bankcode" id="app"  onchange="myFunct()">
 
                                   </select>     
                             </div>
         
                       </div>
+                   
+                      <input type="text" name="bank_name" id="bank_name">
 <!-- <input type="number" name="" id="" maxlength="12" minlength="12"> -->
 
                         <div class="form_body_row">
@@ -150,7 +152,7 @@
                       <div class="form_body_row">
                         <div class="form_body_column"> 
                             <label for="lname">Account Name</label>
-                            <input type="text" id="accname" name="accountname" placeholder="please validate your account Number"  readonly>    
+                            <input type="text" id="accname" name="accountname" placeholder="please validate your account Number"  readonly onchange="Me(this.value)">    
     <ul id="dsa">
 <li class="hidden" id="mtch"> Firstname match </li>
 <li class="hidden" id="nomatch">First Name Doesnt Match</li>
@@ -193,6 +195,18 @@
         
         
         </div>
+<script>
+    function myFunct() {
+    var selTag = document.getElementById("app");
+    var text = selTag.options[selTag.selectedIndex].text;
+    document.getElementById("bank_name").value =  text;  
+}
+</script>
+
+<script></script>
+
+
+
 
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js'></script>
@@ -202,7 +216,7 @@
 });
 </script>
 
-<script>
+<script type=text/ja>
     function myreload() {
         window.location.reload()
     }
@@ -225,6 +239,8 @@
        }
     } 
            </script>
+
+
 
         <script src="banks.js"></script>
         <script src="accnumval.js"></script>
