@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/createinvestment.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.8.0-alpha.1/introjs.css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -82,12 +83,12 @@
                 <div class="transaction_header">
                     Transaction Details
                 </div>
-                <div class="transaction_flex">
+                <div class="transaction_flex" id="principal">
                     <div class="transaction_flex_column">Principal</div>
                     <div class="transaction_flex_column_content">N40,000</div>
                 </div>
                 <div class="transaction_flex">
-                    <div class="transaction_flex_column">Tenor</div>
+                    <div class="transaction_flex_column" id="tenor">Tenor</div>
                     <div class="transaction_flex_column_content">90 days</div>
                 </div>
                 <div class="transaction_flex">
@@ -99,7 +100,7 @@
                     <div class="transaction_flex_column_content">N42,000</div>
                 </div>
 
-                <div class="transaction_flex_btn">
+                <div class="transaction_flex_btn" id="acceptordeny">
                     <div class="transaction_flex_column_btn1"><button>I agree</button></div>
                     <div class="transaction_flex_column_btn2"><button>I don’t agree</button></div>
                 </div>
@@ -128,5 +129,7 @@
            </script>
         <script src="" async defer></script>
         <script src="nav.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.8.0-alpha.1/intro.js'></script>
+        <script src=intro2.js></script>
     </body>
 </html>
