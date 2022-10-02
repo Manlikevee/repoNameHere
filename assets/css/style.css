@@ -181,6 +181,11 @@ body {
   font-weight: var(--fw-500);
   border: 1px solid var(--cultured-3);
 }
+.imgsd img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
 
 .btn-outline:is(:hover, :focus) {
   background-color: var(--pumpkin);
@@ -874,11 +879,7 @@ body {
   display: flex;
   height: 100%;
 }
-.imgsd img{
-  width: 100%;
-  object-fit: cover;
-  height: 100%;
-}
+
 
   /**
    * REUSED STYLE
