@@ -1,0 +1,202 @@
+:root {
+    /* //....... Color ........// */
+    --primary-color: #ff3c78;
+    --light-black: rgba(0, 0, 0, 0.89);
+    --black: #000;
+    --white: #fff;
+    --grey: #aaa;
+}
+
+.contact {
+    margin-top: 55px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.form .form-txt {
+    flex-basis: 48%;
+}
+
+.form .form-txt h1 {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color: var(--light-black);
+}
+
+.form .form-txt span {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-txt h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: var(--light-black);
+}
+
+.form .form-txt p {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-details {
+    flex-basis: 48%;
+}
+
+
+.form .form-details button {
+    padding: 15px 25px;
+    color: var(--white);
+    font-weight: 500;
+    background: var(--black);
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+
+
+}
+input[type=text],[type=email], [type=password], [type=number],  [type=tel], [type=date], select , textarea{
+    width: 100%;
+    padding: 7px 20px;
+    margin: 7px 0 !important;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 100%;
+    line-height: normal !important;
+    font-family: 'Poppins', sans-serif !important;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgba(245, 245, 245, 1);
+    outline-color: transparent;
+  
+  
+  }
+
+  
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+      -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+      -webkit-transition-delay: 9999s;
+  }
+  .accordion .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .accordion .accordion-item button[aria-expanded=true] {
+    border-bottom: 1px solid #03b5d2;
+  }
+  .accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  .accordion button:hover, .accordion button:focus {
+    cursor: pointer;
+    color: #03b5d2;
+  }
+  .accordion button:hover::after, .accordion button:focus::after {
+    cursor: pointer;
+    color: #03b5d2;
+    border: 1px solid #03b5d2;
+  }
+  .accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+  }
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+  }
+  .accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+  .accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  }
+  .accordion button[aria-expanded=true] {
+    color: #03b5d2;
+  }
+  .accordion button[aria-expanded=true] .icon::after {
+    width: 0;
+  }
+  .accordion button[aria-expanded=true] + .accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
+  .accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+  }
+  .accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+  }
