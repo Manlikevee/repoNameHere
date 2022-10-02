@@ -8,10 +8,13 @@
 }
 
 .contact {
+    width: 95%;
+    margin: auto;
     margin-top: 55px;
     background-color: white;
     padding: 40px;
     border-radius: 10px;
+    
 }
 
 .form {
@@ -26,11 +29,11 @@
 
 .form .form-txt h1 {
     font-weight: 600;
-    color: var(--black);
+    color: #eb7f35; 
     font-size: 40px;
     letter-spacing: 1.5px;
-    margin-bottom: 10px;
-    color: var(--light-black);
+    margin-bottom: 6px;
+    color: #eb7f35; 
 }
 
 .form .form-txt span {
@@ -41,8 +44,8 @@
 .form .form-txt h3 {
     font-size: 22px;
     font-weight: 600;
-    margin: 15px 0;
-    color: var(--light-black);
+    margin: 10px 0;
+    color: #eb7f35; 
 }
 
 .form .form-txt p {
@@ -200,3 +203,123 @@ input[type=text],[type=email], [type=password], [type=number],  [type=tel], [typ
     font-weight: 300;
     margin: 2em 0;
   }
+
+  .textbox {
+    box-sizing: border-box;
+    display: inline-block;
+    perspective: 500px;
+    position: relative;
+    text-align: left;
+}
+
+
+  .textbox .autoComplete {
+    left: 0;
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+}
+
+.textbox .autoComplete .item {
+    animation: showItem .3s ease forwards;
+    background-color: oldlace;
+    box-shadow: 0 8px 8px -10px rgba(0, 0, 0, .4);
+    box-sizing: border-box;
+    color: #444;
+    cursor: pointer;
+    display: block;
+    font-size: .9rem;
+    opacity: 0;
+    outline: none;
+    padding: 10px;
+    text-decoration: none;
+    transform-origin: top;
+    /* transform: rotateX(-90deg); */
+    transform: translateX(10px);
+}
+
+.textbox .autoComplete .item:hover,
+.textbox .autoComplete .item:focus {
+    background-color: #fafafa;
+    color: #D1822B;
+}
+
+@keyframes showItem {
+    0% {
+        opacity: 0;
+        /* transform: rotateX(-90deg); */
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        /* transform: rotateX(0); */
+        transform: translateX(0);
+    }
+}
+
+.servicesarea{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+/* 2. Make nav sticky */
+main > nav {
+	position: sticky;
+	top: 6rem;
+	align-self: start;
+}
+
+/* 3. ScrollSpy active styles (see JS tab for activation) */
+.section-nav li.active > a {
+	color: #333;
+	font-weight: 500;
+}
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin-left: 1rem;
+}
+
+/* Sidebar Navigation */
+.section-nav {
+	padding-left: 0;
+	border-left: 1px solid #efefef;
+}
+
+.section-nav a {
+	text-decoration: none;
+	display: block;
+	padding: .125rem 0;
+	color: #ccc;
+	transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+	color: #666;
+}
+
+/** Poor man's reset **/
+* {
+	box-sizing: border-box;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 15em;
+	max-width: 100em;
+	width: 90%;
+	margin: 0 auto;
+}
+section {
+	padding-bottom: 20rem;
+}

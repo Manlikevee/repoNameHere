@@ -91,10 +91,10 @@
             <div class="form">
                 <div class="form-txt">
                     <h1>Contact Us</h1>
-                    <span>Have questions or need to report an issue with a Google product or service? We've got you covered.</span>
-                    <h3>USA</h3>
+                    <span>Have questions or need to report an issue with a crystal product or service? We've got you covered.</span>
+                    <h3>Nigeria</h3>
                     <p>195 E Parker Square Dr, Parker, CO 801<br>+43 982-314-0958</p>
-<br><p></p>
+<br>
                     <div class="container">
                         <h2>Frequently Asked Questions</h2>
                         <div class="accordion">
@@ -135,12 +135,21 @@
               
                  </div>
                  <div class="form_body_row">
+                    <div class="form_body_column textbox completeIt"> 
+                        <input type="text" autocomplete="off" autofocus placeholder="reason">
+                                    <div class="icon"></div>
+                                    <div class="autoComplete"></div>
+                           
+                         </div>
+
+          
+             </div>
+                 <div class="form_body_row">
                     <div class="form_body_column"> 
-             <select name="" id="">
-                <option value="">reason</option>
-             </select>
-               
-             </div>  
+                        <input type="email" name="email" id="email" placeholder="Email" required> 
+                       
+                     </div>
+   
              <div class="form_body_column"> 
                 <input type="email" name="email" id="email" placeholder="Phone Number" required> 
                
@@ -148,8 +157,10 @@
           
              </div>
              <div class="form_body_column"> 
-                    <textarea name="message" id="" cols="52" rows="7" placeholder="Message" required draggable="false">Message
+                <grammarly-editor-plugin>
+                    <textarea name="message" id="" cols="52" rows="7" placeholder="Message" required draggable="false" >Message
                     </textarea>
+                </grammarly-editor-plugin>
                     </div>
 
                                             <div class="form_button_row" 
@@ -180,6 +191,8 @@
     }
  } 
         </script>
+        <script src="https://unpkg.com/@grammarly/editor-sdk?clientId=client_TkAoNkPbKEZGBFMTkKnuDo"></script>
+        <script src="autocopmpete.js"></script>
         <script src="accordion.js"></script>
         <script src="nav.js"></script>
     </body>
