@@ -154,7 +154,7 @@
       }
 
       .cardd {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.497),rgba(0, 0, 0, 0.5)) , url(https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.497),rgba(0, 0, 0, 0.5)) , url(https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/22.jpeg);
         background-repeat: no-repeat;
         background-size: unset;
         background-position: center;
