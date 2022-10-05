@@ -221,8 +221,9 @@ text-align: left;
         display: flex;
         flex-direction: column;
         grid-gap: 10px;
-           padding: 20px;
+           padding: 2px;
            height: auto;
+           overflow: show;
          }
     .wback {
         margin-block: 32px;
@@ -239,5 +240,13 @@ text-align: left;
         grid-gap: 10px;
         width: 100%;
     }
+
+    .tabs-wrapper {
+        box-shadow: none;
+        padding: 0rem;
+        border-radius: 0;
+        height: 100%;
+        max-width: 100%;
+      }
     
   }
