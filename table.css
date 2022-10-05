@@ -1,0 +1,207 @@
+thead {
+    box-shadow: 0 5px 10px #e1e5ee !important;
+  }
+  th {
+    padding: 13px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1rem !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    text-align: start;
+    font-family: inherit !important;
+  }
+
+  .tabled{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+  div#example_wrapper {
+    padding: 20px;
+}
+
+  tr:nth-child(even) {
+    background-color: #f4f6fb !important;
+  }
+
+  td {
+    padding: 15px !important;
+    font-size: 14px;
+    text-align: start;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .status {
+    background-color: red;
+    padding: 0.2rem 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+  }
+.Under_Review {
+      background-color: #ffcdd2;
+      color: #c62828;
+    }
+.Accepted {
+      background-color: #c8e6c9;
+      color: #388e3c;
+    }
+.Pending {
+      background-color: #fff0c2;
+      color: #a68b00;
+}
+
+
+  .amount {
+    text-align: right;
+  }
+
+  tr:nth-child(even) {
+    background-color: #e1e5ee;
+  }
+
+
+ .Rejected{
+    background-color: red !important;
+    color: #fff;
+    }
+a{
+text-decoration: none !important;
+}
+.Under_Review{
+    background-color: #077E8C !important;
+    color: #fff;
+    }
+
+ .Accepted{
+    background-color: green !important;
+    color: #fff;
+    }
+ .Pending{
+    background-color: #F7CB73 !important;
+    color: #000;
+    }
+
+    .colcard{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    }
+
+    .card{
+    background-color: #87cefa;
+    width: 100%;
+    }
+
+    .mtcontainers{
+
+        width: 100% !important;
+        margin: auto;
+        font-size: 13px;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    .flexboxx{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: auto;
+    }
+
+    .tabled{
+        width: 100%;
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+
+
+    .ovh{
+        width: 100%;
+        overflow: scroll;
+    }
+    div.dataTables_wrapper div.dataTables_filter input {
+        /* margin-left: 0.5em; */
+        display: flex;
+        flex-direction: column;
+        width: 90% !important;
+    }
+    @media screen and (max-width:900px) {
+        .site-section{
+            padding: 0;
+        }
+
+
+        div#example_wrapper {
+            padding: 10px;
+        }
+
+        #content .mai .box-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
+            grid-gap: 20px;
+        }
+        div.dataTables_wrapper div.dataTables_filter input {
+            /* margin-left: 0.5em; */
+            display: flex;
+            width: 99% !important;
+        }
+    }
+
+    @media(max-width:991px){
+
+        .imagecop {
+         position: absolute;
+         display: flex;
+         flex-direction: column;
+         height: 130px;
+         width: 130px;
+         border-radius: 9px;
+         border-radius: 50%;
+         top: 50px;
+         left: 40%;
+         border: 3px solid #999;
+     }
+
+    }
+
+    @media(max-width:591px){
+
+        .imagecop {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            height: 130px;
+            width: 130px;
+            border-radius: 9px;
+            border-radius: 50%;
+            top: 50px;
+            left: 31%;
+            border: 3px solid #999;
+        }
+        .tabled {
+            width: 100%;
+            background-color: white;
+            border-radius: 12px;
+            padding: 8px;
+            margin-bottom: 40px;
+        }
+
+        .sbsbs{
+            width: 98% !important;
+        }
+
+        table.dataTable.nowrap th, table.dataTable.nowrap td {
+            white-space: pre-wrap;
+        }
+    }
