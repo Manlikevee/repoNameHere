@@ -203,6 +203,7 @@ text-align: left;
   @media (max-width:750px) {
     .nav-tabs{
         flex-direction:column;
+        margin-bottom: 20px;
     }
     .twside {
         display: flex;
@@ -215,12 +216,28 @@ text-align: left;
         flex-direction: column;
         grid-gap: 8px;
     }
+
+    .tcont{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+           padding: 20px;
+           height: auto;
+         }
     .wback {
         margin-block: 32px;
         background-color: white;
         padding-block: 7px;
         border-radius: 3px;
         padding: 15px;
+    }
+
+    .splitscr {
+        padding-block: 10px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 10px;
+        width: 100%;
     }
     
   }
