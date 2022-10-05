@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.myfooter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    padding: 90px;
+    background-color: white;
+}
+.iconsolid{
+    width: 10%;
+}
+
+.iconsolid img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.addr{
+color: rgba(34, 34, 34, 1);
+font-size: 16px;
+font-weight: 600;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.phn{
+font-size: 14px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.eml{
+font-size: 14px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+
+.quicklink{
+font-size: 15px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+color:rgba(34, 34, 34, 1)
+}
+
+.linkdif{
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+
+color: rgba(34, 34, 34, 1)
+}
+
+.locationsolid{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+}
+
+.se1{
+    display: flex;
+    grid-gap: 35px;
+    width: 100%;
+    justify-content: center;
+}
+
+.pagessolid{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 14px;
+}
+
+
+.se2{
+    margin-top: 30px;
+    width: 90%;
+    text-align: center;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .myfooter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 30px;
+        padding: 40px;
+        background-color: white;
+    }
+    .addr {
+        color: rgba(34, 34, 34, 1);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .locationsolid {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 15px;
+    }
+   
+   
+    .se1 {
+        display: flex;
+        grid-gap: 35px;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
