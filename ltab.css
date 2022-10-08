@@ -1,0 +1,198 @@
+
+.formgrid{
+    margin-top: 60px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 16px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .btnn{
+    background-color: #f3a93d;
+    color: white;
+    border-radius: 9px;
+  }
+  
+  input {
+    outline: 0;
+    background: #f9f9f9;
+    width: 100%;
+    border: 1px solid #f3f3f3;
+
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  select{
+    outline: 0;
+    background: #f9f9f9;
+    width: 100%;
+    border: 1px solid #f3f3f3;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .tcont{
+    padding: 25px;
+    background: white;
+    margin-top: 30px;
+    border-radius: 5px;
+  }
+  
+  table td {
+    padding-block: 10px;
+    grid-gap: 10px;
+    
+  }
+  
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .dt{
+    display: none;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  td span{
+    background-color: green;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 14px;
+  color: white;
+  }
+  
+  table tr {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .725em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 900px) {
+    table {
+      border: 0;
+    }
+  
+    .dt{
+      display: block;
+    }
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      font-size: .8em;
+      text-align: right;
+      padding: 10px;
+      padding-block: 10px;
+      grid-gap: 10px;
+      
+    }
+  
+    td:nth-child(2){
+      background-color: #f9f9f9f9;
+      border-radius: 10px;
+    }
+  
+    td:nth-child(4){
+      background-color: #f9f9f9f9;
+      border-radius: 10px;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+    tbody {
+        padding: 1rem 1rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-gap: 24px;
+    }
+    .tcont {
+        padding: 8px;
+        background: white;
+        margin-top: 30px;
+        border-radius: 5px;
+    }
+
+    .formgrid{
+        margin-top: 60px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 16px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+      }
+    
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
