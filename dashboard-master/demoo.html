@@ -1,50 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- 
-    - material icon link
-  -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet" />
-
-</head>
-
-<body>
-
-  <!-- 
-    - #HEADER
-  -->
-
-
   <!DOCTYPE html>
   <html lang="en">
   
@@ -57,6 +10,12 @@
     <!-- 
       - favicon
     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
   
     <!-- 
@@ -176,6 +135,7 @@
   
       </div>
     </header>
+
     <header class="header" data-header>
       <div class="container">
           <div class="row align-items-center justify-content-between">
@@ -243,9 +203,11 @@
     <main>
       <article class="container article">
   
-        <h2 class="h2 article-title">Hi Elizabeth</h2>
+        <h2 class="h2 article-title" style="display: flex; gap: 4px;">
+          
+          <div id="greeting"></div> Elizabeth</h2>
   
-        <p class="article-subtitle">Welcome to Dashboard!</p>
+        <p class="article-subtitle">Welcome to Your Dashboard!</p>
   
         <!-- 
           - #HOME
@@ -784,7 +746,18 @@
           
               </div>
   
-  
+  <script>
+    const greeting = document.getElementById("greeting");
+const hour = new Date().getHours();
+const welcomeTypes = ["Good morning", "Good afternoon", "Good evening"];
+let welcomeText = "";
+
+if (hour < 12) welcomeText = welcomeTypes[0];
+else if (hour < 18) welcomeText = welcomeTypes[1];
+else welcomeText = welcomeTypes[2];
+
+greeting.innerHTML = welcomeText;
+  </script>
   
          
 <script>
@@ -878,7 +851,48 @@
     <!-- 
       - custom js link
     -->
-    <script src="./assets/js/script.js"></script>
+    <script>
+      'use strict';
+
+
+/**
+ * toggle active class on header
+ * when clicked nav-toggle-btn
+ */
+
+const header = document.querySelector("[data-header]");
+const navToggleBtn = document.querySelector("[data-menu-toggle-btn]");
+
+navToggleBtn.addEventListener("click", function () {
+  header.classList.toggle("active");
+});
+
+
+
+/**
+ * toggle ctx-menu when click on card-menu-btn
+ */
+
+const menuBtn = document.querySelectorAll("[data-menu-btn]");
+
+for (let i = 0; i < menuBtn.length; i++) {
+  menuBtn[i].addEventListener("click", function () {
+    this.nextElementSibling.classList.toggle("active");
+  });
+}
+
+
+
+/**
+ * load more btn loading spin toggle
+ */
+
+const loadMoreBtn = document.querySelector("[data-load-more]");
+
+loadMoreBtn.addEventListener("click", function () {
+  this.classList.toggle("active");
+});
+    </script>
   
   </body>
   

@@ -1047,6 +1047,7 @@ background-color: #E5E5E5;
   padding: 0;
   line-height: 1.5;
   z-index: 20000;
+  box-shadow: 0 2px 2px -2px rgb(0 0 0 / 80%);
 }
 
 .main-content{
