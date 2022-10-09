@@ -372,20 +372,28 @@ else
   }
 </script>
 
+
 <script>
-  window.addEventListener("load", function () {
-setTimeout(
+  document.onreadystatechange = function() {
+if (document.readyState !== "complete") {
+  setTimeout(
   function open(event) {
       document.querySelector(".loading-over").style.display = "block";
   },
-  2000
+  10000
 )
-})
+} else {
+  setTimeout(
+  function open(event) {
+      document.querySelector(".loading-over").style.display = "none";
+  },
+  3000
+)
+}
+};
+</script>
 
-document.querySelector('#close').addEventListener("click", function () {
-document.querySelector(".loading-over").style.display = "none";
-});
-</script> 
+
 
 <script>
   /* This timer waits three seconds to add promises to all images, and executes the remove_loading_message function when all promises are resolved.

@@ -3,7 +3,7 @@ var url = "https://graph.facebook.com/v14.0/100824376140659/messages";
 var xhr = new XMLHttpRequest();
 xhr.open("POST", url);
 
-xhr.setRequestHeader("Authorization", "Bearer EAAGlQoSu89kBAMMwfo56wrqJ0Njd8H2iKCn5ZA1b0wiASTGLhIiC78enVFRMjYy7Kp8gdhOZClhmMTtzZBcb8B6GtNOk005FTLcfv9pUyIrZCdovk0ZAUmEEKk19jeJe5rSIsAUxRCZA3QxXaMPCfdNAhWBlgcLcvUgQCwDQtFAZASsn27tYKln");
+xhr.setRequestHeader("Authorization", "Bearer ");
 xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.onreadystatechange = function () {
