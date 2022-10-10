@@ -327,7 +327,16 @@ text-align: left;
         padding: 10px;
     }
 
-
+    .lrs{
+        margin-top: 30px;
+        display: grid;
+        align-items: center;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-auto-rows: 1fr;
+        grid-gap: 4px;
+    }
+    
 
     
     
