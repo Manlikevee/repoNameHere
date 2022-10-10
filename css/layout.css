@@ -48,12 +48,7 @@ margin-right: auto;
   height: 100%;
   position:absolute;
 }
-body{
-  background: url('https://unsplash.com/photos/67w_x4wvh9E/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8NTh8fHNoYXBlc3xlbnwwfHx8fDE2NjUzMzUwOTI&force=true&w=1920') no-repeat center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+
 .myloadingani::before {
   content: "";
   position: absolute;

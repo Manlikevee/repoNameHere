@@ -23,6 +23,7 @@ function simpleInterest() {
   var principal = parseFloat(document.getElementById("pamount").value);
   var interestRate = parseFloat(document.getElementById("interest").value);
   interestRate = interestRate / 100;
+  console.log(interestRate)
   var termOfLoan = parseFloat(document.getElementById("tenur").value);
   var today = new Date();
   var tomorrow = new Date();

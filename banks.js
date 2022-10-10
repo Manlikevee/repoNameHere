@@ -14,6 +14,9 @@ const hideLoadings = () => {
 // const dog = document.createElement('p')
 const getAccountNumbers = () => {
     displayLoadings();
+
+    RCP_k21i33l80pkde7a
+
     fetch( `https://api.paystack.co/bank/` , {
         headers: {
             "Authorization" : "Bearer sk_test_d1b83ae902e7135db7d879d7121ec665e0a8243d" 
