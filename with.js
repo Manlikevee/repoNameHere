@@ -19,6 +19,7 @@ document.querySelector("#edate").value = today;
 
 
 function simpleInterest() {
+
   console.log("yes")
   var principal = parseFloat(document.getElementById("pamount").value);
   var interestRate = parseFloat(document.getElementById("interest").value);

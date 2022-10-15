@@ -27,6 +27,57 @@
         }
     </style>
 
+<style>
+    .stamp {
+  transform: rotate(12deg);
+  color: #555;
+  font-size: 3rem;
+  font-weight: 700;
+  border: 0.25rem solid #555;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  font-family: "Courier";
+  -webkit-mask-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png");
+  -webkit-mask-size: 944px 604px;
+  mix-blend-mode: multiply;
+}
+
+.is-nope {
+  color: #D23;
+  border: 0.5rem double #D23;
+  transform: rotate(3deg);
+  -webkit-mask-position: 2rem 3rem;
+  font-size: 3rem;
+}
+
+.is-approved {
+    padding: 10px;
+  color: #0A9928;
+  border: 0.5rem solid #0A9928;
+  -webkit-mask-position: 13rem 6rem;
+  transform: rotate(-14deg);
+  border-radius: 0;
+}
+
+.is-draft {
+  color: #C4C4C4;
+  border: 1rem double #C4C4C4;
+  transform: rotate(-5deg);
+  font-size: 6rem;
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  border-radius: 0;
+  padding: 0.5rem;
+}
+.tansaction_details{
+        display: flex;
+        grid-gap: 40px;
+        flex-wrap: wrap;
+    }
+    
+</style>
+
     <header class="header" data-header>
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -140,12 +191,17 @@
 
 
             <div class="fixed_deposit">
-                Fixed Deposit
+                Fixed Deposit 
+                <span class="stamp is-nope">Overdue</span>
             </div>
             <div class="fixed_deposit_text">
                 A fixed deposit, also known as an FD, is an investment instrument offered by banks, as well as
                 non-banking financial companies (NBFC) to their customers to help them save money. With an FD account,
-                you can invest a sizeable amount of money at a predetermined rate of interest for a fixed period </div>
+                you can invest a sizeable amount of money at a predetermined rate of interest for a fixed period
+            
+             
+            
+            </div>
 
             <div class="fix_deposit_grid">
                 <div class="fixed_grid_content">
