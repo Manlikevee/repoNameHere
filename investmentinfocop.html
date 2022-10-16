@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/createinvestment.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.8.0-alpha.1/introjs.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+<style>
+    .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  grid-gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.checkbox-group > * {
+  margin: 0.5rem 0.5rem;
+}
+
+.checkbox-group-legend {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9c9c9c;
+  text-align: center;
+  line-height: 1.125;
+  margin-bottom: 1.25rem;
+}
+
+.checkbox-input {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.checkbox-input:checked + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #2260ff;
+}
+.checkbox-input:checked + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+  background-color: #2260ff;
+  border-color: #2260ff;
+}
+.checkbox-input:checked + .checkbox-tile .checkbox-icon, .checkbox-input:checked + .checkbox-tile .checkbox-label {
+  color: #2260ff;
+}
+.checkbox-input:focus + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+}
+.checkbox-input:focus + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  min-height: 7rem;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox-tile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'%3E%3C/rect%3E%3Cpolyline points='216 72.005 104 184 48 128.005' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.checkbox-tile:hover {
+  border-color: #2260ff;
+}
+.checkbox-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-icon {
+  transition: 0.375s ease;
+  color: #494949;
+}
+.checkbox-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.checkbox-label {
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
+}
+
+.checkbox {
+  counter-reset: checked;
+  width: fit-content;
+}
+
+.checkbox-input:checked {
+  counter-increment: checked;
+}
+
+.count:after {
+  content: counter(checked);
+}
+</style>
+
+        
+        <header class="header" data-header>
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="logo">
+                       <a href="#">
+                        <img src="img/Crystal-Logo 1.svg" alt="">
+                       </a>
+                    </div>
+
+                    
+                    <button type="button" class="nav-toggler">
+                       <span></span>
+                    </button>
+                    <nav class="nav">
+                       <ul>
+                          <li><a href="#" class="active">Dashboard</a></li>
+                          <li><a href="loaninvestment.html">Loans</a></li>
+                          <li><a href="withdrawal.html">Investment</a></li>
+                          <li><a href="securityquestion.html">Self Serv</a></li>
+                          <li><a href="userprofile.html">Contact</a></li>
+                          <li> <a href=""> 
+                            <div class="endnav m2wo">
+                                <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                                    <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                </div> 
+                             </div>     
+                        </a> </li>
+                       </ul>
+
+                    </nav>
+
+                    <div class="endnav out">
+                        <a href="personalinfo.html"> 
+                        <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                            <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                        </div> 
+                        </a>
+                     </div>     
+                   
+                 
+                </div>
+            </div>
+         </header>
+<br><br>
+         <div class="main-content mbsma container vxvxvx">
+
+    <div class="displacedcontainer">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quos!
+        <br>
+        <br>
+        <fieldset class="checkbox-group">
+            <legend class="checkbox-group-legend">Choose your favorites</legend>
+            <div class="checkbox">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-tile">
+                        <span class="checkbox-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <circle cx="96" cy="144.00002" r="10"></circle>
+                                <circle cx="160" cy="144.00002" r="10"></circle>
+                                <path d="M74.4017,80A175.32467,175.32467,0,0,1,128,72a175.32507,175.32507,0,0,1,53.59754,7.99971" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M181.59717,176.00041A175.32523,175.32523,0,0,1,128,184a175.32505,175.32505,0,0,1-53.59753-7.99971" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M155.04392,182.08789l12.02517,24.05047a7.96793,7.96793,0,0,0,8.99115,4.20919c24.53876-5.99927,45.69294-16.45908,61.10024-29.85086a8.05225,8.05225,0,0,0,2.47192-8.38971L205.65855,58.86074a8.02121,8.02121,0,0,0-4.62655-5.10908,175.85294,175.85294,0,0,0-29.66452-9.18289,8.01781,8.01781,0,0,0-9.31925,5.28642l-7.97318,23.91964" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M100.95624,182.08757l-12.02532,24.0508a7.96794,7.96794,0,0,1-8.99115,4.20918c-24.53866-5.99924-45.69277-16.459-61.10006-29.85069a8.05224,8.05224,0,0,1-2.47193-8.38972L50.34158,58.8607a8.0212,8.0212,0,0,1,4.62655-5.1091,175.85349,175.85349,0,0,1,29.66439-9.18283,8.0178,8.0178,0,0,1,9.31924,5.28642l7.97318,23.91964" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                            </svg>
+                        </span>
+                        <span class="checkbox-label">Discord</span>
+                    </span>
+                </label>
+            </div>
+        
+            <div class="checkbox">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-tile">
+                        <span class="checkbox-icon">
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chatbox Ellipses</title><path d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="160" cy="216" r="32"/><circle cx="256" cy="216" r="32"/><circle cx="352" cy="216" r="32"/></svg>
+                        </span>
+                        <span class="checkbox-label">message</span>
+                    </span>
+                </label>
+            </div>
+        
+
+        
+
+            <div class="checkbox">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-tile">
+                        <span class="checkbox-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <circle cx="128" cy="128" r="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle>
+                                <rect x="36" y="36" width="184" height="184" rx="48" stroke-width="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect>
+                                <circle cx="180" cy="75.99998" r="10"></circle>
+                            </svg>
+                        </span>
+                        <span class="checkbox-label">Instagram</span>
+                    </span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-tile">
+                        <span class="checkbox-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle>
+                                <path d="M71.0247,205.27116a159.91145,159.91145,0,0,1,136.98116-77.27311q8.09514,0,15.99054.78906" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M188.0294,53.09083A159.68573,159.68573,0,0,1,64.00586,111.99805a160.8502,160.8502,0,0,1-30.15138-2.83671" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M85.93041,41.68508a159.92755,159.92755,0,0,1,78.99267,138.00723,160.35189,160.35189,0,0,1-4.73107,38.77687" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                            </svg>
+                        </span>
+                        <span class="checkbox-label">Dribbble</span>
+                    </span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-tile">
+                        <span class="checkbox-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle>
+                                <g>
+                                    <path d="M179.1333,108.32931a112.19069,112.19069,0,0,0-102.3584.04859" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                    <path d="M164.29541,136.71457a79.94058,79.94058,0,0,0-72.68359.04736" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                    <path d="M149.47217,165.07248a47.97816,47.97816,0,0,0-43.03662.04736" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="checkbox-label">Spotify</span>
+                    </span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input" />
+                    <span class="checkbox-tile">
+                        <span class="checkbox-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <circle cx="162" cy="128" r="34" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle>
+                                <path d="M128,94V26.00089H94a34,34,0,0,0,0,68Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M128,161.99911V94H94a34,34,0,0,0,0,68Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M128,94V26.00089h34a34,34,0,0,1,0,68Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M128,161.99911v34.00044A34,34,0,1,1,94,162Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                            </svg>
+                        </span>
+                        <span class="checkbox-label">Figma</span>
+                    </span>
+                </label>
+            </div>
+            <div class="checkbox">
+                <label class="checkbox-wrapper">
+                    <input type="checkbox" class="checkbox-input"/>
+                    <span class="checkbox-tile">
+                        <span class="checkbox-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="currentColor" viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none"></rect>
+                                <path d="M80,56.00005h24a0,0,0,0,1,0,0v72a24,24,0,0,1-24,24h0a24,24,0,0,1-24-24V80a24,24,0,0,1,24-24Z" transform="translate(184.00005 24.00003) rotate(90)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M128,80H104a24,24,0,0,1-24-24V56a24,24,0,0,1,24-24h0a24,24,0,0,1,24,24Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M152,32.00007h24a0,0,0,0,1,0,0v72a24,24,0,0,1-24,24h0a24,24,0,0,1-24-24V56a24,24,0,0,1,24-24Z" transform="translate(304 160.00011) rotate(180)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M176,128V104a24,24,0,0,1,24-24h0a24,24,0,0,1,24,24v0a24,24,0,0,1-24,24Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M176,104.00005h24a0,0,0,0,1,0,0v72a24,24,0,0,1-24,24h0a24,24,0,0,1-24-24V128A24,24,0,0,1,176,104.00005Z" transform="translate(23.99995 328.00003) rotate(-90)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M128,176h24a24,24,0,0,1,24,24v0a24,24,0,0,1-24,24h0a24,24,0,0,1-24-24Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M104,128h24a0,0,0,0,1,0,0v72a24,24,0,0,1-24,24h0a24,24,0,0,1-24-24V152A24,24,0,0,1,104,128Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                                <path d="M80,128v24a24,24,0,0,1-24,24h0a24,24,0,0,1-24-24v0a24,24,0,0,1,24-24Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></path>
+                            </svg>
+                        </span>
+                        <span class="checkbox-label">Slack</span>
+                    </span>
+                </label>
+            </div>
+        </fieldset>
+        <div class="transaction_flex_btn" id="acceptordeny" style="align-items: center; justify-content:center;" >
+            <div class="transaction_flex_column_btn1"><button>I agree</button></div>
+            <div class="transaction_flex_column_btn2"><button>I don’t agree</button></div>
+        </div>
+
+    </div>
+</div>
+<script>
+            
+    const navToggler = document.querySelector(".nav-toggler");
+    navToggler.addEventListener("click", navToggle);
+   
+    function navToggle() {
+       navToggler.classList.toggle("active");
+       const nav = document.querySelector(".nav");
+       nav.classList.toggle("open");
+       if(nav.classList.contains("open")){
+           nav.style.maxHeight = nav.scrollHeight + "px";
+       }
+       else{
+           nav.removeAttribute("style");
+       }
+    } 
+           </script>
+        <script src="" async defer></script>
+        <script src="nav.js"></script>
+        <script>
+
+        </script>
+    </body>
+</html>
