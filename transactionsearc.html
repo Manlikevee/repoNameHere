@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.14.0/css/selectize.bootstrap5.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/createinvestment.css">
+
+    </head>
+    <body>
+       
+
+            <header class="header" data-header>
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="logo">
+                           <a href="#">
+                            <img src="img/Crystal-Logo 1.svg" alt="">
+                           </a>
+                        </div>
+    
+                        
+                        <button type="button" class="nav-toggler">
+                           <span></span>
+                        </button>
+                        <nav class="nav">
+                           <ul>
+                              <li><a href="#" class="active">Dashboard</a></li>
+                              <li><a href="loaninvestment.html">Loans</a></li>
+                              <li><a href="withdrawal.html">Investment</a></li>
+                              <li><a href="securityquestion.html">Self Service</a></li>
+                              <li><a href="userprofile.html">Contact</a></li>
+                              <li> <a href=""> 
+                                <div class="endnav m2wo">
+                                    <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                                        <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                    </div> 
+                                 </div>     
+                            </a> </li>
+                           </ul>
+    
+                        </nav>
+    
+                        <div class="endnav out">
+                            <a href="personalinfo.html"> 
+                            <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                                <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                            </div> 
+                            </a>
+                         </div>     
+                       
+                     
+                    </div>
+                </div>
+             </header>
+
+<style>
+    .cardcontainer {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1650433849872-c97a2e8b2c66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1078&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 390px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.cardheader,
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logos img {
+  width: 48px;
+  margin-right: 10px;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.cardheader .chip {
+  width: 60px;
+    width: 50px;
+    height: auto;
+    opacity: 0.8;
+}
+h6 {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 400;
+}
+h5.number {
+  margin-top: 4px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+h5.name {
+  margin-top: 20px;
+}
+.cardcontainer .card-details {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sectionaftsearch{
+    display: flex;
+    grid-gap: 30px;
+}
+    .sechcont{
+        width: 100%;
+    }
+    .scont{
+        display: flex;
+        grid-gap: 10px;
+        width: 100%;
+    }
+    .scont div{
+        width: 100%;
+    }
+button{
+    min-height: calc(1.5em + 0.75rem + 1.5px);
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: orange;
+    padding: 10px;
+}
+
+.osd{
+    width: 63%;
+    height: fit-content;
+    position: sticky;
+    top: 14%;
+}
+
+.textsid{
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 46px;
+}
+   
+@media(max-width:1000px){
+    .osd {
+    width: 80%;
+    height: fit-content;
+    position: sticky;
+    top: 14%;
+}
+.transaction_container {
+    width: 70%;
+}
+}
+
+@media (max-width:850px){
+    .scont {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    width: 100%;
+}
+    .osd {
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    top: 14%;
+}
+}
+@media (max-width:780px){
+    .osd {
+    width: 100%;
+    height: fit-content;
+    position: sticky;
+    top: 14%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sectionaftsearch {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+}
+.textsid {
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 46px;
+    justify-content: center;
+}
+}
+
+.selectize-input {
+    padding: 15px;
+    /* min-height: calc(1.5em + 0.75rem + 2px); */
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+</style>
+
+<div class="main-content container22">
+
+<div class="sechcont" style="margin-top: 60px;">
+    The transaction breakdown component in reports helps you determine whether poor transaction response times are caused by network or server problems, or by client delays, and to pinpoint exactly when the problems are occurring. The transaction breakdown component displays BPM data collected by scripts recorded using the web (HTTP/HTML) protocol, or specific non-web based TCP protocols.
+    <br>
+    <br>
+ 
+</div>
+
+<div class="scont">
+    <div class="dv">
+        <select name="" id="select-beast">
+            <option value="">Select</option>
+            <option value="jan">January</option>
+            <option value="feb">February</option>
+            <option value="march">March</option>
+            <option value="feb">February</option>
+            <option value="jan">January</option>
+            <option value="feb">February</option>
+            <option value="march">March</option>
+            <option value="feb">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="aug">August</option>
+            <option value="sept">September</option>
+            <option value="oct">October</option>
+            <option value="nov">November</option>
+            <option value="dec">December</option>
+
+        
+        </select>
+    </div>
+    <div class="serch">
+        <div class="transaction_flex_column_btn1"><button>I agree</button></div>
+    </div>
+
+
+</div>
+<br>
+<br>
+<div class="sectionaftsearch">
+    <div class="osd">
+        <div class="cardcontainer">
+            <div class="cardheader">
+              <span class="logos">
+                <img src="images/logo.png" alt="" />
+                <h5>Master Card</h5>
+              </span>
+              <img src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png" alt="" class="chip" />
+            </div>
+      
+            <div class="card-details">
+              <div class="name-number">
+                <h6>Card Number</h6>
+                <h5 class="number">8050 5040 2030 3020</h5>
+                <h5 class="name">Prem Kumar Shahi</h5>
+              </div>
+              <div class="valid-date">
+                <h6>Valid Thru</h6>
+                <h5>05/28</h5>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+
+      <div class="textsid">
+        <div class="transaction_container">
+            <div class="transaction_header">
+                Investment Details
+            </div>
+            <div class="transaction_flex" id="principal">
+                <div class="transaction_flex_column">Principal</div>
+                <div class="transaction_flex_column_content">N40,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column" id="tenor">Tenor</div>
+                <div class="transaction_flex_column_content">90 days</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Interest (5%)</div>
+                <div class="transaction_flex_column_content">N2,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Maturity Amount</div>
+                <div class="transaction_flex_column_content">N42,000</div>
+            </div>
+
+        </div>
+
+        <div class="transaction_container">
+            <div class="transaction_header">
+                Investment Details
+            </div>
+            <div class="transaction_flex" id="principal">
+                <div class="transaction_flex_column">Principal</div>
+                <div class="transaction_flex_column_content">N40,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column" id="tenor">Tenor</div>
+                <div class="transaction_flex_column_content">90 days</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Interest (5%)</div>
+                <div class="transaction_flex_column_content">N2,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Maturity Amount</div>
+                <div class="transaction_flex_column_content">N42,000</div>
+            </div>
+
+        </div>
+
+        <div class="transaction_container">
+            <div class="transaction_header">
+                Investment Details
+            </div>
+            <div class="transaction_flex" id="principal">
+                <div class="transaction_flex_column">Principal</div>
+                <div class="transaction_flex_column_content">N40,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column" id="tenor">Tenor</div>
+                <div class="transaction_flex_column_content">90 days</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Interest (5%)</div>
+                <div class="transaction_flex_column_content">N2,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Maturity Amount</div>
+                <div class="transaction_flex_column_content">N42,000</div>
+            </div>
+
+        </div>
+
+        <div class="transaction_container">
+            <div class="transaction_header">
+                Investment Details
+            </div>
+            <div class="transaction_flex" id="principal">
+                <div class="transaction_flex_column">Principal</div>
+                <div class="transaction_flex_column_content">N40,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column" id="tenor">Tenor</div>
+                <div class="transaction_flex_column_content">90 days</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Interest (5%)</div>
+                <div class="transaction_flex_column_content">N2,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Maturity Amount</div>
+                <div class="transaction_flex_column_content">N42,000</div>
+            </div>
+
+        </div>
+
+        <div class="transaction_container">
+            <div class="transaction_header">
+                Investment Details
+            </div>
+            <div class="transaction_flex" id="principal">
+                <div class="transaction_flex_column">Principal</div>
+                <div class="transaction_flex_column_content">N40,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column" id="tenor">Tenor</div>
+                <div class="transaction_flex_column_content">90 days</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Interest (5%)</div>
+                <div class="transaction_flex_column_content">N2,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Maturity Amount</div>
+                <div class="transaction_flex_column_content">N42,000</div>
+            </div>
+
+        </div>
+
+        <div class="transaction_container">
+            <div class="transaction_header">
+                Investment Details
+            </div>
+            <div class="transaction_flex" id="principal">
+                <div class="transaction_flex_column">Principal</div>
+                <div class="transaction_flex_column_content">N40,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column" id="tenor">Tenor</div>
+                <div class="transaction_flex_column_content">90 days</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Interest (5%)</div>
+                <div class="transaction_flex_column_content">N2,000</div>
+            </div>
+            <div class="transaction_flex">
+                <div class="transaction_flex_column">Maturity Amount</div>
+                <div class="transaction_flex_column_content">N42,000</div>
+            </div>
+
+        </div>
+
+
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique vel magnam iusto nihil optio placeat animi facere doloribus officiis, corrupti rerum, tempore magni odit sit nesciunt, nulla natus suscipit excepturi aliquam aliquid aperiam. Reiciendis animi quis ullam quia! Laborum magnam adipisci, in suscipit commodi voluptatem. Rerum excepturi fugit, commodi at quidem porro reprehenderit quam. Fugit exercitationem obcaecati perspiciatis rem molestiae neque assumenda dolor eveniet, veniam praesentium suscipit similique asperiores voluptatibus nam ad nostrum quos consequuntur quod unde tempora iste explicabo ipsum? Reprehenderit sequi dolore quam assumenda praesentium molestias quo nostrum, blanditiis deleniti excepturi, sit nesciunt voluptatum quibusdam tempora maiores perspiciatis cupiditate inventore vel corrupti mollitia earum, fuga voluptatem quisquam. Aliquid officia dolore laudantium incidunt magnam doloribus labore consectetur ea sapiente, sed veniam pariatur sit iste facilis similique laboriosam ut totam nihil doloremque distinctio, reiciendis accusantium molestias mollitia? Aut amet soluta fuga, perferendis non et corporis nulla. Odio similique voluptatem cum temporibus impedit molestias rerum sit labore sed? Ipsum deleniti pariatur exercitationem nihil sit in perspiciatis neque corrupti quos repellat ipsam, commodi assumenda id consequatur esse laborum, provident molestiae quod, saepe possimus laudantium totam tempore cupiditate? Harum dolores cupiditate eius natus sunt accusamus, quos mollitia et placeat eum, architecto reiciendis possimus, at consequatur in debitis? Eveniet minima repudiandae tempore a dignissimos ducimus asperiores dolorem dolores provident rem corporis, illo quas nam sed incidunt ipsa necessitatibus, numquam, neque hic ad voluptate eaque aut aperiam. Doloribus autem atque consequuntur molestiae dolorum ipsa quidem sint adipisci? Voluptas animi doloremque voluptates. Ex modi harum quo animi quidem minus explicabo cumque? Error incidunt fugit vero et. Ducimus voluptates nulla at assumenda laborum enim alias, architecto consectetur commodi in voluptate unde! Soluta voluptatem ea maiores fugiat, eius ut sapiente dolores quis! A quos optio ipsa consequuntur perferendis porro cumque nostrum nihil reiciendis quia maxime quod molestiae minus iure tenetur repellendus totam, voluptatum ducimus illo minima consequatur laboriosam pariatur. Amet, quo consequuntur fugit ipsa quis nisi minus animi iste. Modi officia fugiat aut alias quos nihil in placeat similique sunt. Maiores laudantium nesciunt, pariatur modi voluptatem necessitatibus similique perspiciatis fugit saepe temporibus consectetur, voluptates in porro? Atque ab culpa maxime deserunt fugiat eos, nihil labore vitae exercitationem necessitatibus voluptatem reprehenderit sint ex commodi expedita ipsam? Inventore debitis atque officia fuga, ea commodi adipisci, sit dolorem quod voluptate nobis rerum, beatae mollitia? Odit dolores laudantium aliquid minima error nam placeat culpa recusandae, animi ullam earum reiciendis at repudiandae quam rerum amet, delectus cupiditate ipsa ab autem eos voluptatum. Officia nam consequatur amet, eius, eligendi, sed esse facilis culpa modi dolorum magnam. Et illum, natus totam voluptatum aspernatur consequuntur modi necessitatibus obcaecati aperiam quibusdam incidunt maiores doloremque. Enim fugit aspernatur dolores itaque molestias dolorum rem, aliquam corporis illo a laudantium minima autem. Praesentium consequatur reprehenderit vero blanditiis, aut commodi doloremque nemo nam, consequuntur quia repellat pariatur ipsam deserunt sequi officiis vitae distinctio nostrum dignissimos voluptate totam numquam animi magnam delectus soluta. Nobis iure, perferendis est, illum, hic molestiae tempore facilis sequi exercitationem reiciendis nemo ad tempora deserunt sunt sapiente modi?
+      </div>
+</div>
+
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.14.0/js/standalone/selectize.min.js'></script>
+
+
+
+
+<script>
+$("#select-beast").selectize({
+  create: true,
+  sortField: "text",
+});
+  </script>
+  
+
+        <script>
+            
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+        </script>
+        <script src="nav.js"></script>
+    </body>
+</html>
