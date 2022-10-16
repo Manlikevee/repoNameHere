@@ -3,7 +3,7 @@
 
 
 /**
- * add event on element
+ * add Event on elements
  */
 
 const addEventOnElem = function (elem, type, callback) {
@@ -23,32 +23,41 @@ const addEventOnElem = function (elem, type, callback) {
  */
 
 const navbar = document.querySelector("[data-navbar]");
-const navToggler = document.querySelector("[data-nav-toggler]");
-const navLinks = document.querySelectorAll("[data-nav-link]");
+const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+const navbarLinks = document.querySelectorAll("[data-nav-link]");
+const overlay = document.querySelector("[data-overlay]");
 
-const toggleNavbar = function () { navbar.classList.toggle("active"); }
+const toggleNavbar = function () {
+  navbar.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
 
-addEventOnElem(navToggler, "click", toggleNavbar);
+addEventOnElem(navTogglers, "click", toggleNavbar);
 
-const closeNavbar = function () { navbar.classList.remove("active"); }
+const closeNavbar = function () {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+}
 
-addEventOnElem(navLinks, "click", closeNavbar);
+addEventOnElem(navbarLinks, "click", closeNavbar);
 
 
 
 /**
- * header active
+ * header & back top btn show when scroll down to 100px
  */
 
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
-window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
+const headerActive = function () {
+  if (window.scrollY > 80) {
     header.classList.add("active");
     backTopBtn.classList.add("active");
   } else {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
   }
-});
+}
+
+addEventOnElem(window, "scroll", headerActive);
