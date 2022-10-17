@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/createinvestment.css">
+
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/createinvestment.css' %}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+      
+
+
+
+        <header class="header" data-header>
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="logo">
+                       <a href="#">
+                        <img src="img/Crystal-Logo 1.svg" alt="">
+                       </a>
+                    </div>
+
+                    
+                    <button type="button" class="nav-toggler">
+                       <span></span>
+                    </button>
+                    <nav class="nav">
+                   
+                    </nav>
+
+                   
+                 
+                </div>
+            </div>
+         </header>
+
+
+<div class="main-content container22">
+
+    <div class="mycontent mycontents">
+
+        <div class="create_investment_form creativeform2">
+            
+            <div class="investment_form_title">
+                <h3>Generate Unique Admin Key</h3>
+                <p class="innerdog">
+                    The Crystal secrete UUID-key is a unique identifier that authenticates requests associated with your project for creation of new admin accounts. 
+                           </p>
+            </div>
+<br>
+<form method="post" action="#">
+  {% csrf_token %}
+            <div class="form_body">
+
+
+
+                <div class="form_body_row">
+                    <div class="form_body_column"> 
+                  RestrictingUUID-keys adds security to your application by protecting it from unwarranted requests. For more information, see UUID security best practices.
+                  <p>
+                   <strong> <q>Valid for one account only</q> </strong>
+                  </p>
+                    </div>
+
+                </div>
+                <div class="form_body_row">
+                  <div class="form_body_column"> 
+                <input type="checkbox" name="accept" id="" required> i agree to privacy policy
+</div>
+</div>
+
+                <div class="form_body_row" >
+   
+                  <div class="form_button_row" style="
+                  width: 100%;
+              ">
+                      <input type="submit" value="Generate Code">
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+
+            </div>
+          </form>
+
+        </div>
+    </div>
+
+
+</div>
+        
+        <script>
+            
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+        </script>
+
+        <script>
+            let copyText = document.querySelector(".copy-text");
+copyText.querySelector("button").addEventListener("click",function(){
+  let input = copyText.querySelector("input.text");
+  input.select();
+  document.execCommand("copy");
+  copyText.classList.add("active");
+  window.getSelection().removeAllRanges();
+  setTimeout(function(){
+    copyText.classList.remove("active");
+  },2500);
+});
+
+
+let copyTex = document.querySelector(".cop");
+copyTex.querySelector("button").addEventListener("click",function(){
+  let input = copyTex.querySelector("input.text");
+  input.select();
+  document.execCommand("copy");
+  copyTex.classList.add("active");
+  window.getSelection().removeAllRanges();
+  setTimeout(function(){
+    copyTex.classList.remove("active");
+  },2500);
+});
+        </script>
+        <script src="nav.js"></script>
+        <script src="{% static 'js/nav.js' %}"></script>
+    </body>
+</html>

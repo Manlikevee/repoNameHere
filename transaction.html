@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.14.0/css/selectize.bootstrap5.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css'>
+        <link rel="stylesheet" href="css/createinvestment.css">
+
+    </head>
+    <body>
+       
+
+            <header class="header" data-header>
+                <div class="container">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="logo">
+                           <a href="#">
+                            <img src="img/Crystal-Logo 1.svg" alt="">
+                           </a>
+                        </div>
+    
+                        
+                        <button type="button" class="nav-toggler">
+                           <span></span>
+                        </button>
+                        <nav class="nav">
+                           <ul>
+                              <li><a href="#" class="active">Dashboard</a></li>
+                              <li><a href="loaninvestment.html">Loans</a></li>
+                              <li><a href="withdrawal.html">Investment</a></li>
+                              <li><a href="securityquestion.html">Self Service</a></li>
+                              <li><a href="userprofile.html">Contact</a></li>
+                              <li> <a href=""> 
+                                <div class="endnav m2wo">
+                                    <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                                        <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                                    </div> 
+                                 </div>     
+                            </a> </li>
+                           </ul>
+    
+                        </nav>
+    
+                        <div class="endnav out">
+                            <a href="personalinfo.html"> 
+                            <div class="headprofile_name">Oluwatosin Ajayi</div>  <div class="headprofile_img">
+                                <img src="https://images.unsplash.com/photo-1647733298832-07738aa106c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+                            </div> 
+                            </a>
+                         </div>     
+                       
+                     
+                    </div>
+                </div>
+             </header>
+
+<style>
+   
+
+.services-grid a {
+  text-decoration: none;
+  margin: 1rem 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1px;
+}
+
+.services-grid p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+
+
+.services-grid h3 {
+
+  font-weight: 600;
+  color: #333;
+  font-size: 1.825rem;
+  margin: 1.3rem 0;
+}
+
+.section-lead {
+  max-width: 100%;
+  margin: 1rem auto 1.5rem;
+}
+
+.service a {
+  color: #5b7abb;
+  display: block;
+}
+
+.service h4 {
+
+  font-weight: 600;
+  color: #56ceba;
+  font-size: 1.3rem;
+  margin: 1rem 0 0.6rem;
+}
+
+.services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-auto-rows: 1fr;
+      grid-gap: 10px;
+}
+
+.service {
+  background: #fff;
+  margin: 12px;
+  padding: 13px;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e7e7e7;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.service i {
+  font-size: 3.45rem;
+  margin: 1rem 0;
+}
+
+.service1 i,
+.service1 h4,
+.service1 .cta {
+  color: #42b7ca;
+}
+
+.service1:hover {
+  border: 2px solid #42b7ca;
+}
+
+.service2 i,
+.service2 h4,
+.service2 .cta {
+  color: #425fca;
+}
+
+.service2:hover {
+  border: 2px solid #425fca;
+}
+
+.service3 i,
+.service3 h4,
+.service3 .cta {
+  color: #9c42ca;
+}
+
+.service3:hover {
+  border: 2px solid #9c42ca;
+}
+
+.service .cta span {
+  font-size: 0.6rem;
+}
+
+.service > * {
+  flex: 1 1 100%;
+}
+
+.service .cta {
+  align-self: flex-end;
+}
+
+
+
+</style>
+
+<div class="main-content container22">
+
+<div class="sechcont" style="margin-top: 60px;">
+
+    <div class="services-grid">
+        <div class="service service2">
+            <i class="ti-light-bulb"></i>
+            <h4>Dispute Resolution</h4>
+            <p>In cases where your loan application or your investment plan has been marked as paid and is not reflecting in your bank account, and also in chargeback cases</p>
+            <a href="#" class="cta">Explore Service <span class="ti-angle-right"></a>
+          </div>
+
+          <div class="service service2">
+            <i class="ti-search"></i>
+            <h4>Transaction Report</h4>
+            <p>A transaction report is data submitted to us which contains information relating to a transaction. We use the reports to detect transaction status and investigate suspected market abuse.</p>
+            <a href="#" class="cta">Explore Service <span class="ti-angle-right"></a>
+          </div>
+
+        <div class="service service1">
+          <i class="ti-headphone-alt"></i>
+          <h4>Customer Support</h4>
+          <p>We provide a range of customer services to assist customers in making cost effective and correct use of a product. It includes assistance in planning,  training, troubleshooting, maintenance and disposal of a product.</p>
+          <a href="#" class="cta">Explore Service <span class="ti-angle-right"></a>
+        </div>
+    
+
+    
+        <div class="service service3">
+          <i class="ti-timer"></i>
+          <h4>Schedule A Payment</h4>
+          <p>Scheduled payments are regular recurring payments. They can be made on a recurring basis set by the payer. Many customers prefer to set in scheduled payments to help keep track of their expenses and not risk missing any payments.</p>
+          <a href="#" class="cta">Explore Service <span class="ti-angle-right"></span></a>
+        </div>
+
+      
+          <div class="service service2">
+            <i class="ti-light-bulb"></i>
+            <h4>Request A Demo</h4>
+            <p>What Is a Demo Request? A demo request is a preview or trial version of a software solution, distributed free of charge by companies once prospects hand over their contact information</p>
+            <a href="#" class="cta">Coming soon <span class="ti-widget"></span></a>
+          </div>
+      
+          <div class="service service3">
+            <i class="ti-plug"></i>
+            <h4>API'S</h4>
+            <p>API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other.</p>
+            <a href="#" class="cta">Coming soon <span class="ti-widget"></span></a>
+          </div>
+      </div>
+</div>
+
+
+
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+  
+<script src='https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.14.0/js/standalone/selectize.min.js'></script>
+
+
+
+
+<script>
+$("#select-beast").selectize({
+  create: true,
+  sortField: "text",
+});
+  </script>
+  
+
+        <script>
+            
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ } 
+        </script>
+        <script src="nav.js"></script>
+    </body>
+</html>
