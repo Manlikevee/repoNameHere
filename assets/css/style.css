@@ -358,7 +358,7 @@ body {
 
 .header.active {
   background-color: var(--white);
-  padding-block: 15px;
+  padding-block: 10px;
   box-shadow: var(--shadow-1);
 }
 
@@ -1187,7 +1187,7 @@ body {
 
   .container { max-width: 960px; }
 
-  .btn { height: 70px; }
+
 
   .grid-list { grid-template-columns: repeat(3, 1fr); }
 

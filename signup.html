@@ -10,6 +10,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/createinvestment.css">
@@ -120,7 +122,13 @@
     
     }
         </style>
-
+<style>
+    .iti {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+</style>
 
         <div class="loading-over">
             <div class="popup">
@@ -218,9 +226,9 @@
                        
                         <input type="text" id="m_name" name="middle_name" placeholder="Middle name.">   
                     </div>
-                    <div class="form_body_column"> 
+                    <div class="form_body_column" onclick="simpleInterestasas()"> 
                         <label for="fname">Phone Number </label>
-                        <input type="tel" id="phone" name="phonenumber" placeholder="Phone number">    
+                        <input type="tel" id="mobile_code" name="phonenumber" placeholder="Phone number" onkeyup="simpleInterestasas()">    
                     </div>
                 </div>
 
@@ -243,6 +251,8 @@
                         <input type="submit" value="Create Account">
                     </div>
                 </div>
+                <span onclick="simpleInterestasas()">cd</span>
+                <input type="number" name="" id="phonenums" value="">
 
                 <div class="passworddog">
                     Already have an account? <span><a href="login.html">Sign In</a> </span> 
@@ -290,7 +300,28 @@ document.querySelector(".loading-over").style.display = "none";
 });
 </script>
 
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+
+<script>
+    // -----Country Code Selection
+$("#mobile_code").intlTelInput({
+	initialCountry: "ng",
+	separateDialCode: true,
+	// utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+});
+</script>
+
+<script>
+    function simpleInterestasas() {
+    const collection = document.getElementsByClassName("iti__selected-dial-code");
+   
+    man = collection[0].innerHTML.substr(1)
+    document.getElementById("phonenums").value = man + document.getElementById("mobile_code").value
+    } 
+</script>
 
         <script src="nav.js"></script>
         <script src="{% static 'js/nav.js' %}"></script>
