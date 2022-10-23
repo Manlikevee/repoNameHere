@@ -243,6 +243,18 @@
                     </div>
                 </div>
 
+                <div class="form_body_row">
+                    <div class="form_body_column"> 
+                        <label for="Mname">Middle name</label>
+                       
+                        <input type="text" id="m_nasme" name="middsle_name" placeholder="Middle name.">   
+                    </div>
+                    <div class="form_body_column manlikevee" onclick="simpleInterestv2()"> 
+                        <label for="fname">Phone Number </label>
+                        <input type="tel" id="mobile_code2" name="phonenumber" placeholder="Phone number" onkeyup="simpleInterestv2()">    
+                    </div>
+                </div>
+
                 <div class="form_body_row" >
    
                     <div class="form_button_row" style="
@@ -253,6 +265,7 @@
                 </div>
                 <span onclick="simpleInterestasas()">cd</span>
                 <input type="number" name="" id="phonenums" value="">
+                <input type="number" name="" id="phonenumss" value="">
 
                 <div class="passworddog">
                     Already have an account? <span><a href="login.html">Sign In</a> </span> 
@@ -315,11 +328,34 @@ $("#mobile_code").intlTelInput({
 </script>
 
 <script>
+    // -----Country Code Selection
+$("#mobile_code2").intlTelInput({
+	initialCountry: "ng",
+	separateDialCode: true,
+	// utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+});
+</script>
+
+
+
+<script>
     function simpleInterestasas() {
     const collection = document.getElementsByClassName("iti__selected-dial-code");
    
     man = collection[0].innerHTML.substr(1)
     document.getElementById("phonenums").value = man + document.getElementById("mobile_code").value
+    } 
+</script>
+
+<script>
+    function simpleInterestv2() {
+    const collections = document.getElementsByClassName("manlikevee");
+    const vee = document.querySelectorAll(".manlikevee .iti__selected-dial-code");
+    // const vee = collections.querySelector(".iti__selected-dial-code").innerHTML;
+    console.log(vee)
+   
+    man = vee[0].innerHTML.substr(1)
+    document.getElementById("phonenumss").value = man + document.getElementById("mobile_code2").value
     } 
 </script>
 
