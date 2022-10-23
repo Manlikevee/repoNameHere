@@ -1,0 +1,464 @@
+{%load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/style.css">
+                <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+          <link rel="stylesheet" href="{% static 'css/createinvestment.css' %}">
+                  <link rel="stylesheet" href="{% static 'css/wb.css' %}">
+
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+
+{% include "adminheaders.html" %}
+{% include "popup/messwithtag.html" %}
+
+
+
+<div class="main-content container22">
+
+    <div class="wback">
+        <div class="topfram">
+
+        </div>
+        <div class="splitscr">
+        <div class="profico">
+            <img src="{{j.requestuser.myprofileimage.profilepic.url}}" alt="">
+        </div>
+
+        <div class="txttt">
+            <div class="sppp">
+
+                {{j.requestuser.first_name}} {{j.requestuser.last_name}}
+            </div>
+            <div class="bbbb">
+               <span>status </span>  <strong>{{j.application_status}} </strong>
+            </div>
+        </div>
+    </div>
+
+        <div class="tabs-wrapper">
+            <ul class="nav-tabs">
+              <li class="nav-item tab is-active" data-role="tab" data-target="#tabs-home3">
+                Personal Information
+              </li>
+
+              <li class="nav-item tab" data-role="tab" data-target="#tabs-profile3">
+                Investors Information
+              </li>
+
+              <li class="nav-item tab" data-role="tab" data-target="#tabs-messages3">
+                Bank Information
+              </li>
+
+                <li class="nav-item tab" data-role="tab" data-target="#tabs-payment">
+                Payment Information
+              </li>
+
+              <li class="nav-item tab" data-role="tab" data-target="#tabs-nextofkins3">
+                Next of kin
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-panel is-active" id="tabs-home3">
+
+<div class="tcont">
+    <div class="twside">
+        <div class="sd1">
+            <div class="lbl">Title</div>
+            <div class="txt"><input type="text" readonly value="Mr"></div>
+            <div class="erw"></div>
+        </div>
+        <div class="sd1">
+            <div class="lbl">First Name</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.first_name}}"></div>
+            <div class="erw"></div>
+        </div>
+    </div>
+
+    <div class="twside">
+        <div class="sd1">
+            <div class="lbl">Last Name</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.last_name}}"></div>
+            <div class="erw"></div>
+        </div>
+        <div class="sd1">
+            <div class="lbl">Middle Name</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.middle_name}}"></div>
+            <div class="erw"></div>
+        </div>
+    </div>
+
+
+    <div class="twside">
+        <div class="sd1">
+            <div class="lbl">Phone Number</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.phonenumber}}"></div>
+            <div class="erw"></div>
+        </div>
+        <div class="sd1">
+            <div class="lbl">Email Address</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.email}}"></div>
+            <div class="erw"></div>
+        </div>
+    </div>
+
+
+    <div class="twside">
+        <div class="sd1">
+            <div class="lbl">Date of Birth</div>
+            <div class="txt"><input type="text" readonly value="victor"></div>
+            <div class="erw"></div>
+        </div>
+        <div class="sd1">
+            <div class="lbl">Gender</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.gender}}"></div>
+            <div class="erw"></div>
+        </div>
+    </div>
+
+    <div class="twside">
+       <div class="sd1">
+            <div class="lbl">Nationality</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.country}}"></div>
+            <div class="erw"></div>
+        </div>
+        <div class="sd1">
+            <div class="lbl">State</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.rep_state}}"></div>
+            <div class="erw"></div>
+        </div>
+    </div>
+
+
+
+    <div class="twside">
+        <div class="sd1">
+            <div class="lbl">Lga</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.city}}"></div>
+            <div class="erw"></div>
+        </div>
+                <div class="sd1">
+            <div class="lbl">Address</div>
+            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.rep_address_1}}"></div>
+            <div class="erw"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+            </div>
+              <div class="tab-panel" id="tabs-profile3">
+
+                <div class="tcont">
+                    <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">WorK Sector</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.work_sector}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                        <div class="sd1">
+                            <div class="lbl">Job Title</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.job_title}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+                    <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Form Of ID</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.form_of_id}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                        <div class="sd1">
+                            <div class="lbl">ID number</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.id_number}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+              </div>
+
+                    <div class="tab-panel" id="tabs-payment">
+
+                <div class="tcont">
+                    <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Authorization Code</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_code}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                        <div class="sd1">
+                            <div class="lbl">Charge Status</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.gateway_response}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+                                  <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Payment Method</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.channel}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                        <div class="sd1">
+                            <div class="lbl">Card Type</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.authorization.card_type}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Reusability</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.authorization.reusable}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                        <div class="sd1">
+                            <div class="lbl">bank</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.authorization.bank}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+                              <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Expiry Month</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.authorization.exp_month}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                        <div class="sd1">
+                            <div class="lbl">Expiry Year</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.authorization.exp_year}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+                                        <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Customer Code</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.customer.customer_code}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                        <div class="sd1">
+                            <div class="lbl">Customer Email</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.paymentdetails.authorization_data.data.customer.email}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+              </div>
+              <div class="tab-panel" id="tabs-messages3">
+
+                <div class="tcont">
+                    <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Bank Name</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.accountdetails.bank_name}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                        <div class="sd1">
+                            <div class="lbl">Bank Code</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.accountdetails.bank_code}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="twside">
+
+                        <div class="sd1">
+
+                            <div class="lbl">Account Number</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.accountdetails.account_number}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                                                <div class="sd1">
+                            <div class="lbl">Account Name</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.accountdetails.account_name}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+
+
+
+                        <div class="sd1">
+                            <div class="lbl">BVN</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.profile.bvn}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                    <div class="tab-panel" id="tabs-nextofkins3">
+                <div class="tcont">
+                                        <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">first name</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.nextofkin.first_name}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                        <div class="sd1">
+                            <div class="lbl">Last Name</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.nextofkin.last_name}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="twside">
+
+                              <div class="sd1">
+                            <div class="lbl">Middle Name</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.nextofkin.middle_name}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                                                <div class="sd1">
+                            <div class="lbl">Email</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.nextofkin.email}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">Phone Number</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.nextofkin.phonenumber}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                        <div class="sd1">
+
+                            <div class="lbl">Gender</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.nextofkin.gender}}"></div>
+                            <div class="erw"></div>
+                        </div>
+                    </div>
+
+                    <div class="twside">
+                        <div class="sd1">
+                            <div class="lbl">residential_address</div>
+                            <div class="txt"><input type="text" readonly value="{{j.requestuser.nextofkin.residential_address}}"></div>
+                            <div class="erw"></div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+        <div>
+          <a href="{% url 'acceptuserpreview' j.pk %}"> Accept </a>
+            <button class="btnn">Reject</button>
+        </div>
+
+          </div>
+
+
+
+    </div>
+
+</div>
+
+<script>
+    const tabs = document.querySelectorAll('[data-role="tab"]'),
+  tabContents = document.querySelectorAll(".tab-panel");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach((tc) => {
+      tc.classList.remove("is-active");
+    });
+    target.classList.add("is-active");
+
+    tabs.forEach((t) => {
+      t.classList.remove("is-active");
+    });
+    tab.classList.add("is-active");
+  });
+});
+</script>
+        <script>
+
+ const navToggler = document.querySelector(".nav-toggler");
+ navToggler.addEventListener("click", navToggle);
+
+ function navToggle() {
+    navToggler.classList.toggle("active");
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("open");
+    if(nav.classList.contains("open")){
+    	nav.style.maxHeight = nav.scrollHeight + "px";
+    }
+    else{
+    	nav.removeAttribute("style");
+    }
+ }
+        </script>
+           <script src="{% static 'js/nav.js' %}"></script>
+    </body>
+</html>
